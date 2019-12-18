@@ -1,0 +1,41 @@
+
+.main-site-wrapper {
+  width: 1536px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url("../assets/images/side-line.png");
+    background-repeat: repeat-y;
+    background-position: top left;
+    background-size: 100% auto;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: url("../assets/images/side-line.png");
+    background-repeat: repeat-y;
+    background-position: top left;
+    background-size: 100% auto;
+    transform: scaleX(-1);
+  }
+}
+.app-main {
+  height: 699px;
+}
+.app-navigation {
+  flex: 1 1 100%;
+}
