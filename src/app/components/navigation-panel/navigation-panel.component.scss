@@ -1,3 +1,71 @@
 .navigation-panel {
-  flex: 1 1 100%;
+  position: relative;
+  width: 100%;
+  .panel-border-line {
+    position: absolute;
+    width: 100%;
+    height: 11px;
+    background-image: url("../../../assets/images/line-no1.png");
+    background-repeat: repeat-y;
+    background-position: top left;
+    background-size: 100% auto;
+    //transform: scaleX(-1);
+    &--top {
+      top: 0;
+      left: 0;
+      background-image: url("../../../assets/images/line-no12.png");
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+    }
+    &--bottom {
+      bottom: 0;
+      left: 0;
+      background-image: url("../../../assets/images/line-no12.png");
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+    }
+    &--left,
+    &--right{
+      left: 0;
+      top: 0;
+      width: 11px;
+      height: 100%;
+      &::before {
+        content: '';
+        height: 11px;
+        width: 11px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("../../../assets/images/corner-no1.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 100%;
+        transform: rotate(270deg);
+      }
+      &::after {
+        content: '';
+        height: 11px;
+        width: 11px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: url("../../../assets/images/corner-no1.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 100%;
+        transform: rotate(180deg);
+      }
+    }
+    &--right {
+      left: unset;
+      right: 0;
+      &::before {
+        transform: rotate(0deg);
+      }
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
 }

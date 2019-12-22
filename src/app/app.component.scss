@@ -37,7 +37,9 @@
   height: 699px;
 }
 .app-navigation {
-  flex: 1 1 100%;
+  flex: 1 1 auto;
+  display: flex;
+  position: relative;
 }
 .bottom-line {
   position: absolute;
