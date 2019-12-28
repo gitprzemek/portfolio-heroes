@@ -1,0 +1,27 @@
+<ng-container *ngIf="type === 'field'">
+  <div class="action__first-border">
+    <div class="action__sec-border">
+      <div class="action__content">
+
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="type === 'text'">
+  <div class="action__first-border action__first-border--text">
+    <div class="action__sec-border action__sec-border--text">
+      <div class="action__content action__content--text">
+
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="type === 'button'">
+  <div class="action__first-border action__first-border--button">
+    <button class="action__sec-border action__sec-border--button">
+      <span class="action__content action__content--button">
+        {{content}}
+      </span>
+    </button>
+  </div>
+</ng-container>
