@@ -69,5 +69,75 @@
     background-repeat: no-repeat;
     background-image: url("../../../assets/images/wiatrak-bottom.gif");
   }
+  .buildings__grall-animation {
+    position: absolute;
+    width: 200px;
+    height: 243px;
+    top: 28px;
+    left: 433px;
+    background-size: 100% auto;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -66px;
+      left: 52px;
+      width: 2px;
+      height: 94px;
+      background: #2a251e;
+      background: linear-gradient(180deg, #736e66 0%, #2a251e 74%, rgba(41, 34, 24, 0.23) 100%);
+      -webkit-animation: lines 4s linear infinite;
+      animation: lines 4s linear infinite;
+      transform-origin: 50% 200%;
+      z-index: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -170px;
+      left: 128px;
+      width: 2px;
+      height: 202px;
+      background: rgb(42,37,30);
+      background: linear-gradient(180deg, #736e66 0%, rgb(42, 37, 30) 54%, rgba(41, 34, 24, 0.33) 100%);
+      animation: lines 4s linear infinite;
+      transform-origin: 50% 100%;
+      z-index: 0;
+    }
+  }
+  .grall-animation {
+    position: absolute;
+    width: 167px;
+    height: 243px;
+    top: 0;
+    left: 15px;
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/images/grall-gif.gif");
+    animation: fly 4s linear infinite;
+    z-index: 1;
+  }
+  @keyframes fly {
+    0% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(-5px);
+    }
+  }
+  @keyframes lines {
+    0% {
+      transform: rotateZ(-1.5deg);
+    }
+    50% {
+      transform: rotateZ(1.5deg);
+    }
+    100% {
+      transform: rotateZ(-1.5deg);
+    }
+  }
 
 }

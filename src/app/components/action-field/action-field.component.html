@@ -25,3 +25,10 @@
     </button>
   </div>
 </ng-container>
+<ng-container *ngIf="type === 'image'">
+  <div class="action__first-border ">
+    <div class="action__sec-border ">
+      <img [src]=content alt="flag" class="action__content action__content--image">
+    </div>
+  </div>
+</ng-container>
