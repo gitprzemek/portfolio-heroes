@@ -6,9 +6,9 @@
   <div class="navigation-panel__content">
     <div class="navigation-panel__left-container">
       <div class="left-container__top">
-        <app-action-field class="left-container__top-left" [type]="'field'"></app-action-field>
+        <app-action-field class="left-container__top-left" [type]="'image'" [content]="'../../../assets/images/dragon-crakow.png'"></app-action-field>
         <div class="left-container__top-right">
-          <app-action-field class="left-container__top-right-top" [type]="'text'"></app-action-field>
+          <app-action-field class="left-container__top-right-top" [type]="'text'" [content]="'Cracow'"></app-action-field>
           <div class="left-container__top-right-bottom">
             <app-action-field class="left-container__trb-field" [type]="'text'"></app-action-field>
             <app-action-field class="left-container__trb-field" [type]="'text'"></app-action-field>
@@ -17,20 +17,47 @@
         </div>
       </div>
       <div class="left-container__bottom">
-        <app-action-field class="left-container__bottom-field" [type]="'field'"></app-action-field>
-        <app-action-field class="left-container__bottom-field" [type]="'field'"></app-action-field>
-        <app-action-field class="left-container__bottom-field" [type]="'field'"></app-action-field>
-        <app-action-field class="left-container__bottom-field" [type]="'field'"></app-action-field>
+        <app-action-field class="left-container__bottom-field"
+                          [type]="'button-link'"
+                          [content]="'../../../assets/images/github-logo2.png'"
+                          [link]="'https://github.com/gitprzemek'"></app-action-field>
+        <app-action-field class="left-container__bottom-field"
+                          [type]="'button-link'"
+                          [content]="'../../../assets/images/in3.png'"
+                          [link]="'https://github.com/gitprzemek'"></app-action-field>
+        <app-action-field class="left-container__bottom-field"
+                          [type]="'button-link'"
+                          [content]="'../../../assets/images/mail-icon.png'"
+                          [link]="'https://github.com/gitprzemek'"></app-action-field>
+        <app-action-field class="left-container__bottom-field"
+                          [type]="'button-link'"
+                          [content]="'../../../assets/images/mail-icon.png'"
+                          [link]="'https://github.com/gitprzemek'"></app-action-field>
+
       </div>
     </div>
     <div class="navigation-panel__center-container">
-      <app-action-field class="navigation-panel__center-image" [type]="'image'" [content]="'../../../assets/images/redflag.png'"></app-action-field>
-      <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'About me'"></app-action-field>
-      <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My projects'"></app-action-field>
-      <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My skills'"></app-action-field>
-      <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'Contact'"></app-action-field>
+      <div class="navigation-panel__field-wrapper">
+        <app-action-field class="navigation-panel__center-image" [type]="'image'" [content]="'../../../assets/images/redflag.png'"></app-action-field>
+      </div>
+      <div class="navigation-panel__field-wrapper">
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'About me'"></app-action-field>
+      </div>
+      <div class="navigation-panel__field-wrapper">
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My projects'"></app-action-field>
+      </div>
+      <div class="navigation-panel__field-wrapper">
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My skills'"></app-action-field>
+      </div>
+      <div class="navigation-panel__field-wrapper">
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'Contact'"></app-action-field>
+      </div>
     </div>
     <div class="navigation-panel__right-container">
+      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Music: ON'"></app-action-field>
+      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Sounds: ON'"></app-action-field>
+      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Language: ENG'"></app-action-field>
+      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Back'"></app-action-field>
     </div>
   </div>
 </section>

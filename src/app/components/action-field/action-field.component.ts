@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ActionFieldComponent implements OnInit {
   @Input() type: string;
   @Input() content: string;
+  @Input() link: string;
 
   constructor() { }
 

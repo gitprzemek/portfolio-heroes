@@ -11,7 +11,7 @@
   <div class="action__first-border action__first-border--text">
     <div class="action__sec-border action__sec-border--text">
       <div class="action__content action__content--text">
-
+        {{content}}
       </div>
     </div>
   </div>
@@ -23,6 +23,15 @@
         {{content}}
       </span>
     </button>
+  </div>
+</ng-container>
+<ng-container *ngIf="type === 'button-link'">
+  <div class="action__first-border action__first-border--button">
+    <div class="action__sec-border action__sec-border--button">
+      <a [href]="link" class="action__link" target="_blank">
+        <img [src]=content alt="logo" class="action__link-img">
+      </a>
+    </div>
   </div>
 </ng-container>
 <ng-container *ngIf="type === 'image'">

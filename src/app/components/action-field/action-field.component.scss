@@ -35,6 +35,7 @@
     border-left: 4px solid rgba(255, 255, 255, 0.22);
     border-right: 4px solid rgba(0, 0, 0, 0.35);
     outline: none;
+    cursor: pointer;
 
     &:active:hover {
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../assets/images/bg1.png") repeat  102px 37px;
@@ -48,8 +49,9 @@
   }
 }
 .action__content {
-  font-size: 21px;
+  font-size: 20px;
   letter-spacing: 1px;
+
 }
 .action__content--button {
   background-color: transparent;
@@ -68,5 +70,18 @@
 .action__content--image {
   width: 100%;
   height: 100%;
+}
+.action__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.action__link-img {
+  width: 55%;
+  height: auto;
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(6, 6, 6, 0.8));
+  filter: drop-shadow(2px 2px 1px rgba(6, 6, 6, 0.8));
 }
 
