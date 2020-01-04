@@ -11,4 +11,10 @@
 
   <app-main-panel class="app-main"></app-main-panel>
   <app-navigation-panel class="app-navigation"></app-navigation-panel>
+  <app-about-me class="component component--about-me" *ngIf="showAboutMe"></app-about-me>
+  <app-about-projects class="component component--about-projects" *ngIf="showAboutProjects"></app-about-projects>
+  <app-about-skills class="component component--about-skills" *ngIf="showAboutSkills"></app-about-skills>
+  <app-contact class="component component--contact" *ngIf="showContact"></app-contact>
+
 </div>
+

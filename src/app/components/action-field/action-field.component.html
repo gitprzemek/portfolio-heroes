@@ -25,6 +25,13 @@
     </button>
   </div>
 </ng-container>
+<ng-container *ngIf="type === 'button-img'">
+  <div class="action__first-border action__first-border--button">
+      <button class="action__sec-border action__sec-border--button">
+        <img [src]=content alt="logo" class="action__button-img">
+      </button>
+  </div>
+</ng-container>
 <ng-container *ngIf="type === 'button-link'">
   <div class="action__first-border action__first-border--button">
     <div class="action__sec-border action__sec-border--button">
