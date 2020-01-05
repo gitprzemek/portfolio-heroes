@@ -12,9 +12,9 @@
     content: '';
     position: absolute;
     width: 20px;
-    height: 100%;
+    height: calc(100% - 34px);
     left: 0;
-    top: 0;
+    top: 17px;
     background-image: url("../assets/images/linetransp.png");
     background-repeat: repeat-y;
     background-position: top left;
@@ -24,9 +24,9 @@
     content: '';
     position: absolute;
     width: 20px;
-    height: 100%;
+    height: calc(100% - 34px);
     right: 0;
-    top: 0;
+    top: 17px;
     background-image: url("../assets/images/linetransp.png");
     background-repeat: repeat-y;
     background-position: top left;
@@ -44,9 +44,9 @@
 }
 .bottom-line {
   position: absolute;
-  width: calc(100% - 20px);
+  width: calc(100% - 34px);
   height: 20px;
-  left: 10px;
+  left: 17px;
   bottom: 0;
   background-image: url("../assets/images/linetransp2.png");
   background-repeat: repeat-x;
@@ -56,9 +56,9 @@
 }
 .top-line {
   position: absolute;
-  width: calc(100% - 20px);
+  width: calc(100% - 34px);
   height: 20px;
-  left: 10px;
+  left: 17px;
   top: 0;
   background-image: url("../assets/images/linetransp2.png");
   background-repeat: repeat-x;
@@ -106,6 +106,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.68);
+  //background-color: rgba(0, 0, 0, 0.2);
 }
 
