@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MainServiceService} from "../../shared/services/main-service.service";
+import {AboutProjects} from "../../shared/content/AboutProjects";
 
 @Component({
   selector: 'app-about-projects',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-projects.component.scss']
 })
 export class AboutProjectsComponent implements OnInit {
-
-  constructor() { }
+  projectsData = AboutProjects;
+  constructor(private _mainServiceService: MainServiceService) { }
 
   ngOnInit() {
   }
-
+  closeWindow(): void {
+    this._mainServiceService.showAboutProjects.next(false);
+  }
 }
