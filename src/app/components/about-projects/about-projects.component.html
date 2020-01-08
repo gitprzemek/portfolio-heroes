@@ -12,27 +12,27 @@
     </div>
     <div class="about-projects__box about-projects__box--2">
       <div class="about-projects__tiles-cont">
-        <div class="about-projects__tile" *ngFor="let project of projectsData">
+        <div class="about-projects__tile" *ngFor="let project of projectsData; let i = index">
           <div class="about-projects__first-border">
             <div class="about-projects__sec-border">
               <div class="about-projects__tile-col about-projects__tile-col--1">
                 <span class="about-projects__tile-title">{{project.title.en}}</span>
-                <app-action-field class="about-projects__tile-desc" [type]="'text'" [content]="'Cracow'"></app-action-field>
+                <app-action-field class="about-projects__tile-desc" [type]="'text'" [content]="project.description.en"></app-action-field>
                 <div class="about-projects__tile-links">
                   <app-action-field class="about-projects__tile-link"
                                     [type]="'button-link-text'"
                                     [content]="'DEMO'"
-                                    [link]="'https://github.com/gitprzemek'"></app-action-field>
+                                    [link]="project.links.demo"></app-action-field>
                   <app-action-field class="about-projects__tile-link"
                                     [type]="'button-link-text'"
                                     [content]="'CODE'"
-                                    [link]="'https://github.com/gitprzemek'"></app-action-field>
+                                    [link]="project.links.repo"></app-action-field>
 
                 </div>
 
               </div>
               <div class="about-projects__tile-col about-projects__tile-col--2">
-                <app-action-field class="about-projects__tile-image" [type]="'image'" [content]="'../../../assets/images/redflag.png'"></app-action-field>
+                <app-action-field class="about-projects__tile-image " [ngClass]="'about-projects__tile-image'+i" [type]="'imageBg'" [content]="project.photo"></app-action-field>
               </div>
               <div class="about-projects__tile-col about-projects__tile-col--3">
                 <div class="about-projects__tile-tech" *ngFor="let tech of project.tech">
@@ -50,7 +50,6 @@
         <app-action-field class="about-projects__button"
                           [type]="'button-img'"
                           [content]="'../../../assets/images/exit.png'"
-                          [link]="'https://github.com/gitprzemek'"
                           (click)="closeWindow()"></app-action-field>
       </div>
     </div>

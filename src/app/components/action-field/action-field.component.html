@@ -53,7 +53,14 @@
 <ng-container *ngIf="type === 'image'">
   <div class="action__first-border ">
     <div class="action__sec-border ">
-      <img [src]=content alt="flag" class="action__content action__content--image">
+      <img [src]=content alt="image" class="action__content action__content--image">
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="type === 'imageBg'">
+  <div class="action__first-border ">
+    <div class="action__sec-border action__sec-border--bg">
+      <img [src]=content alt="image" class="action__content action__content--image-bg">
     </div>
   </div>
 </ng-container>

@@ -142,6 +142,13 @@
 .about-projects__tile-col--1 {
   width: 35%;
   justify-content: space-between;
+  ::ng-deep .action__content {
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    padding: 2px;
+    line-height: 1.5em;
+  }
 }
 .about-projects__tile-col--2 {
   width: 30%;
@@ -149,6 +156,16 @@
 .about-projects__tile-col--3 {
   width: 35%;
   justify-content: space-between;
+  ::ng-deep .action__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1px;
+    text-align: left;
+
+  }
 }
 .about-projects__tile-title {
   height: 15%;
@@ -168,12 +185,43 @@
 }
 .about-projects__tile-link {
   width: 48%;
+  height: 34px;
 }
 .about-projects__tile-image {
   height: 100%;
   width: 100%;
-
 }
+.about-projects__tile-image1 {
+  ::ng-deep .action__content--image-bg {
+    width: 72%;
+    transform: translate(-45%, -50%);
+  }
+}
+.about-projects__tile-image2 {
+  ::ng-deep .action__content--image-bg {
+    width: 60%;
+    transform: translate(-53%, -31%);
+  }
+}
+.about-projects__tile-image3 {
+  ::ng-deep .action__content--image-bg {
+    width: 57%;
+    transform: translate(-53%, -35%);
+  }
+}
+.about-projects__tile-image4 {
+  ::ng-deep .action__content--image-bg {
+    width: 72%;
+    transform: translate(-45%, -50%);
+  }
+}
+.about-projects__tile-image5 {
+  ::ng-deep .action__content--image-bg {
+    width: 68%;
+    transform: translate(-46%, -50%);
+  }
+}
+
 .about-projects__tile-tech {
   display: flex;
   flex-direction: row;
@@ -198,7 +246,11 @@
   width: 80%;
   height: 100%;
   ::ng-deep .action__content {
-    font-size: 16px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
   }
 }
 .about-projects__actions-cont {
