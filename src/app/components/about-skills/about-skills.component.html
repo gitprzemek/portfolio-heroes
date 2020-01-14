@@ -1,5 +1,47 @@
-<section class="about-skills">
-  about skills
+<div class="background-blur"></div>
+<section class="about-skills section">
+  <div class="top-line"></div>
+  <div class="bottom-line"></div>
+  <div class="corner-line corner-line--lt"></div>
+  <div class="corner-line corner-line--lb"></div>
+  <div class="corner-line corner-line--rt"></div>
+  <div class="corner-line corner-line--rb"></div>
+  <div class="about-skills__content">
 
-
+    <div class="about-skills__box about-skills__box--1">
+      <div class="about-skills__window-bg"
+           [ngStyle]="{'transform': 'translate(-' + widthPercent + '%, ' + '-' + heightPercent + '%)'}">
+      </div>
+      <span class="about-skills__logo about-skills__logo--1" (mouseover)="passTextToInput('Javascript')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--2" (mouseover)="passTextToInput('CSS3')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--3" (mouseover)="passTextToInput('HTML5')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--4" (mouseover)="passTextToInput('SASS/SCSS')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--5" (mouseover)="passTextToInput('BEM')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--6" (mouseover)="passTextToInput('Material design system')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--7" (mouseover)="passTextToInput('Bootstrap')" (mouseout)="passTextToInput('')"></span>
+<!--      <span class="about-skills__logo about-skills__logo&#45;&#45;8"></span>-->
+      <span class="about-skills__logo about-skills__logo--9" (mouseover)="passTextToInput('GIT')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--10" (mouseover)="passTextToInput('Firebase')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--11" (mouseover)="passTextToInput('RxJS')" (mouseout)="passTextToInput('')"></span>
+<!--      <span class="about-skills__logo about-skills__logo&#45;&#45;12"></span>-->
+      <span class="about-skills__logo about-skills__logo--13" (mouseover)="passTextToInput('Angular 2+')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--14" (mouseover)="passTextToInput('TypeScript')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--15" (mouseover)="passTextToInput('Photoshop')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--16" (mouseover)="passTextToInput('Adobe XD')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--17" (mouseover)="passTextToInput('JQuery')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--18" (mouseover)="passTextToInput('Gulp')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--19" (mouseover)="passTextToInput('Trello')" (mouseout)="passTextToInput('')"></span>
+      <span class="about-skills__logo about-skills__logo--20" (mouseover)="passTextToInput('Jira')" (mouseout)="passTextToInput('')"></span>
+    </div>
+    <div class="about-skills__box about-skills__box--2">
+      <div class="about-skills__actions-cont">
+        <app-action-field class="about-skills__button-text" [type]="'text'" [content]="textFromLogo"></app-action-field>
+        <app-action-field class="about-skills__button"
+                          [type]="'button-img'"
+                          [content]="'../../../assets/images/exit.png'"
+                          [link]="'https://github.com/gitprzemek'"
+                          (click)="closeWindow()"></app-action-field>
+      </div>
+    </div>
+  </div>
 </section>
