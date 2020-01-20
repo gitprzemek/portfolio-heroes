@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MainServiceService} from "../../shared/services/main-service.service";
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _mainServiceService: MainServiceService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+  }
+
+  closeWindow(): void {
+    this._mainServiceService.showContact.next(false);
   }
 
 }

@@ -1,5 +1,23 @@
-<section class="contact">
-  contact
 
-
+<div class="background-blur"></div>
+<section class="contact section">
+  <div class="top-line"></div>
+  <div class="bottom-line"></div>
+  <div class="corner-line corner-line--lt"></div>
+  <div class="corner-line corner-line--lb"></div>
+  <div class="corner-line corner-line--rt"></div>
+  <div class="corner-line corner-line--rb"></div>
+  <div class="contact__content">
+    <div class="contact__box contact__box--1">
+      <h2>Contact</h2>
+    </div>
+    <div class="contact__box about-me__box--3">
+      <div class="contact__actions-cont">
+        <app-action-field class="contact__button"
+                          [type]="'button-img'"
+                          [content]="'../../../assets/images/exit.png'"
+                          (click)="closeWindow()"></app-action-field>
+      </div>
+    </div>
+  </div>
 </section>

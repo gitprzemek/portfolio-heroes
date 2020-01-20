@@ -25,4 +25,8 @@ export class MainPanelComponent implements OnInit {
   openAboutProjects(): void {
     this._mainServiceService.showAboutProjects.next(true);
   }
+
+  openContact(): void {
+    this._mainServiceService.showContact.next(true);
+  }
 }
