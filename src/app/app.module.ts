@@ -9,6 +9,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { AboutSkillsComponent } from './components/about-skills/about-skills.component';
 import { AboutProjectsComponent } from './components/about-projects/about-projects.component';
 import { ContactComponent } from './components/contact/contact.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './components/contact/contact.component';
     ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

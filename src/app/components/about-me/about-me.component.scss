@@ -21,6 +21,8 @@
   background-repeat: repeat;
   background-position: top left;
   background-size: 300px auto;
+  color: #fff4e3;
+  text-shadow: 2px 2px #000000;
   &::before {
     content: '';
     position: absolute;
