@@ -10,6 +10,7 @@ import {HttpClient} from "@angular/common/http";
 export class ContactComponent implements OnInit {
   showMessageSuccess: boolean = false;
   showMessageError: boolean = false;
+  showMessageErrorPost = '';
   constructor(private _mainServiceService: MainServiceService,
               private http: HttpClient) { }
 
@@ -21,15 +22,27 @@ export class ContactComponent implements OnInit {
   }
   onSubmit(form): void {
     console.log(form);
+    const formObj = JSON.stringify(form.value);
     if (form.form.valid) {
       form.reset();
       form.submitted = false;
-      this.showMessageError = false;
-      this.showMessageSuccess = true;
-      // this.http.post('https://formspree.io/xjvyljap', form);
+      this.http.post('https://formspree.io/xjvyljap', formObj).subscribe(
+        data => {
+          this.showMessageError = false;
+          this.showMessageSuccess = true;
+          this.showMessageErrorPost = '';
+        },
+        error => {
+          console.log(error);
+          this.showMessageSuccess = false;
+          this.showMessageError = false;
+          this.showMessageErrorPost = error.status;
+        }
+      );
     } else {
       this.showMessageSuccess = false;
       this.showMessageError = true;
+      this.showMessageErrorPost = '';
     }
   }
 

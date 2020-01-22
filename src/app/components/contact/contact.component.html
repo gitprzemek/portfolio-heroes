@@ -44,6 +44,7 @@
       </form>
       <div *ngIf="showMessageSuccess">Email has been sent.</div>
       <div *ngIf="showMessageError">Error sending. Please fill out the fields correctly.</div>
+      <div *ngIf="showMessageErrorPost">Error sending. Http error({{showMessageErrorPost}})</div>
     </div>
     <div class="contact__box contact__box--3">
       <div class="contact__actions-cont">

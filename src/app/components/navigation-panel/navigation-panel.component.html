@@ -16,7 +16,7 @@
             <app-action-field class="left-container__trb-field left-container__trb-field--long"
                               [type]="'button-img'"
                               [content]="'../../../assets/images/hands.png'"
-                              [link]="'https://github.com/gitprzemek'"></app-action-field>
+                              [link]="'https://github.com/gitprzemek'" (click)="openContact()"></app-action-field>
             <div class="left-container__trb-field left-container__trb-field--img-gold">
               <img class="left-container__img-gold" src="../../../assets/images/gold2.png" alt="gold">
             </div>
@@ -48,20 +48,33 @@
         <app-action-field class="navigation-panel__center-image" [type]="'image'" [content]="'../../../assets/images/redflag.png'"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'About me'"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'About me'" (click)="openAboutMe()"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My projects'"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My projects'" (click)="openAboutSkills()"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My skills'"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My skills'" (click)="openAboutProjects()"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'Contact'"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'Contact'" (click)="openContact()"></app-action-field>
       </div>
     </div>
     <div class="navigation-panel__right-container">
-      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Music: ON'"></app-action-field>
+      <div id="player">
+        <audio hidden loop #music>
+          <source src="../../../assets/music/music-file.mp3" type="audio/mpeg">
+          If you're reading this, audio isn't supported.
+        </audio>
+      </div>
+      <app-action-field class="navigation-panel__right-button"
+                        [type]="'button'" [content]="'Music is OFF'"
+                        (click)="toggleMusic(music, true)"
+                        *ngIf="!playMusic"></app-action-field>
+      <app-action-field class="navigation-panel__right-button"
+                        [type]="'button'" [content]="'Music is ON'"
+                        (click)="toggleMusic(music, false)"
+                        *ngIf="playMusic"></app-action-field>
       <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Sounds: ON'"></app-action-field>
       <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Language: ENG'"></app-action-field>
       <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Back'"></app-action-field>
