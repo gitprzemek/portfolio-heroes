@@ -11,6 +11,7 @@ import { AboutProjectsComponent } from './components/about-projects/about-projec
 import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { WelcomeScreenComponent } from './components/welcome-screen/welcome-screen.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
     AboutMeComponent,
     AboutSkillsComponent,
     AboutProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    WelcomeScreenComponent
   ],
   imports: [
     BrowserModule,
