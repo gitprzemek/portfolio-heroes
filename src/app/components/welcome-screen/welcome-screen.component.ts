@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome-screen.component.scss']
 })
 export class WelcomeScreenComponent implements OnInit {
-
+  enterToApp = false;
   constructor() { }
 
   ngOnInit() {
+  }
+  enterToAppFn(): void {
+    this.enterToApp = true;
   }
 
 }

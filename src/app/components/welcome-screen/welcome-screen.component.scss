@@ -5,20 +5,110 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgb(255, 241, 251);
+  background: rgb(16,58,110);
+  background: radial-gradient(circle at 50% -30%, #103a6e 0%, #103a6e 10%, #070b11 71%, #070b11 100%);
   z-index: 999;
+  transition: opacity 0.5s ease-in 0.8s, z-index 1.4s linear 1.3s;
+  opacity: 1;
+  .welcome__second-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(85, 31, 86, 0.98);
+    background: rgb(16,58,110);
+    background: radial-gradient(32% 70% ellipse at 50% -12%, rgba(47, 163, 233, 0.2) 0%, rgba(47, 163, 233, 0.1) 25%, rgba(7, 11, 17, 0) 56%);
+    //background: radial-gradient(32% 70% ellipse at 50% -12%, rgba(85, 31, 86, 0.3) 0%, rgba(85, 31, 86, 0.1) 25%, rgba(7, 11, 17, 0) 56%);
+  }
   .welcome__wrapper {
     position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
   }
+  .welcome__main-image {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    min-width: 550px;
+    margin: 0 auto;
+  }
+  .stairs-wrapper {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    top: 60%;
+    transform: translateY(-40px);
+    z-index: 2;
+}
+  .stairs__ele {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 400px;
+    height: 80px;
+    background-image: url("../../../assets/images/step.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, 0);
+  }
+  .stairs__ele--first {
+    top: 0;
+  }
+  .stairs__ele--sec {
+    top: 65px;
+    width: 460px;
+    animation: move1 7s linear infinite;
+    transform: translate(-50%, 10px);
+  }
+  .stairs__ele--third {
+    top: 140px;
+    width: 520px;
+    animation: move2 9s linear infinite;
+    transform: translate(-50%, 10px);
+  }
+  @keyframes move1 {
+    0%   {transform: translate(-50%, 6px);}
+    50%  {transform: translate(-50%, -10px);}
+    100%  {transform: translate(-50%, 6px);}
+  }
+  @keyframes move2 {
+    0%   {transform: translate(-50%, -8px);}
+    50%  {transform: translate(-50%, 8px);}
+    100%  {transform: translate(-50%, -8px);}
+  }
   .svg-wrapper {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    position: absolute;
+    margin: 0 auto;
+    color: #000000;
   }
   .svg {
-    width: 100%;
+    position: absolute;
+    width: 75%;
+    max-width: 656px;
+    min-width: 520px;
     height: auto;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+    filter:  url("#innershadow");
+    transition: all ease-in 0.8s;
+    cursor: pointer;
   }
+  .svg .myfill {
+    filter: url("#turbulence");
+  }
+  .enter {
+    transform: translate(-50%, 0) scale(10);
+  }
+
+}
+.enterWelcome {
+  opacity: 0;
+  z-index: -999;
 }
