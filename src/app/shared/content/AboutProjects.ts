@@ -7,7 +7,7 @@ export const AboutProjects = [
     tech: ['Angular 2+', 'CSS3 | SASS', 'JS | TypeScript', 'Photoshop', 'BEM', 'Flex | RWD']
   },
   {
-    title: { en: 'U duzego kowboja', pl: 'U duzego kowboja'},
+    title: { en: 'Big Cowboy', pl: 'U duzego kowboja'},
     description: { en: 'Commercial project commissioned by a local restaurant.',
       pl: 'Komercyjny projekt wykonany na zlecenie miejscowej restauracji.'},
     links: {demo: 'http://uduzegokowboja.pl/', repo: 'https://github.com/gitprzemek/u_duzego_kowboja'},
@@ -16,8 +16,8 @@ export const AboutProjects = [
   },
   {
     title: { en: 'Old portfolio', pl: 'Stare portfolio'},
-    description: { en: 'The project, and at the same time my portfolio page. Created the longest and most often improved.',
-      pl: 'Projekt, a jednocześnie moja strona portfolio. Tworzony najdłużej i najczęściej aktualizowany.'},
+    description: { en: 'My old portfolio page project',
+      pl: 'Moje stare portfolio i projekt'},
     links: {demo: 'https://gitprzemek.github.io/portfolio/', repo: 'https://github.com/gitprzemek/portfolio'},
     photo: '../../../assets/images/projects-images/nyancat.gif',
     tech: ['HTML5', 'CSS3', 'JavaScript | JQuery', 'Photoshop', 'Gulp', 'Flex | RWD' ]

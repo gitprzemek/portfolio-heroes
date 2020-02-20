@@ -8,7 +8,7 @@
       <div class="left-container__top">
         <app-action-field class="left-container__top-left" [type]="'image'" [content]="'../../../assets/images/dragon-crakow2.png'"></app-action-field>
         <div class="left-container__top-right">
-          <app-action-field class="left-container__top-right-top" [type]="'text'" [content]="'Cracow'"></app-action-field>
+          <app-action-field class="left-container__top-right-top" [type]="'text'" [content]="'MAIN_SITE.CITY_NAME' | translate"></app-action-field>
           <div class="left-container__top-right-bottom">
 <!--            <app-action-field class="left-container__trb-field" [type]="'text'"></app-action-field>-->
 <!--            <app-action-field class="left-container__trb-field" [type]="'text'"></app-action-field>-->
@@ -48,16 +48,16 @@
         <app-action-field class="navigation-panel__center-image" [type]="'image'" [content]="'../../../assets/images/redflag.png'"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'About me'" (click)="openAboutMe()"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'MAIN_SITE.ABOUT_ME' | translate" (click)="openAboutMe()"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My projects'" (click)="openAboutSkills()"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'MAIN_SITE.MY_PROJECTS' | translate" (click)="openAboutSkills()"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'My skills'" (click)="openAboutProjects()"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'MAIN_SITE.MY_SKILLS' | translate" (click)="openAboutProjects()"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
-        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'Contact'" (click)="openContact()"></app-action-field>
+        <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'MAIN_SITE.CONTACT' | translate" (click)="openContact()"></app-action-field>
       </div>
     </div>
     <div class="navigation-panel__right-container">
@@ -68,16 +68,28 @@
         </audio>
       </div>
       <app-action-field class="navigation-panel__right-button"
-                        [type]="'button'" [content]="'Music is OFF'"
+                        [type]="'button'" [content]="'MAIN_SITE.MUSIC_OFF' | translate"
                         (click)="toggleMusic(music, true)"
                         *ngIf="!playMusic"></app-action-field>
       <app-action-field class="navigation-panel__right-button"
-                        [type]="'button'" [content]="'Music is ON'"
+                        [type]="'button'" [content]="'MAIN_SITE.MUSIC_ON' | translate"
                         (click)="toggleMusic(music, false)"
                         *ngIf="playMusic"></app-action-field>
-      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Sounds: ON'"></app-action-field>
-      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Language: ENG'"></app-action-field>
-      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'Back'"></app-action-field>
+      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'MAIN_SITE.SOUND' | translate"></app-action-field>
+      <app-action-field class="navigation-panel__right-button"
+                        [type]="'button'"
+                        [content]="'MAIN_SITE.LANGUAGE' | translate"
+                        *ngIf="selectedLanguage === 'en'"
+                        (click)="changeLanguageFn('pl')">
+      </app-action-field>
+      <app-action-field class="navigation-panel__right-button"
+                        [type]="'button'"
+                        [content]="'MAIN_SITE.LANGUAGE' | translate"
+                        *ngIf="selectedLanguage === 'pl'"
+                        (click)="changeLanguageFn('en')">
+      </app-action-field>
+      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'MAIN_SITE.BACK' | translate"
+      (click)="enterToWelcomeScreenFn(false)"></app-action-field>
     </div>
   </div>
 </section>

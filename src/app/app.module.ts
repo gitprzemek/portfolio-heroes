@@ -10,8 +10,14 @@ import { AboutSkillsComponent } from './components/about-skills/about-skills.com
 import { AboutProjectsComponent } from './components/about-projects/about-projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { WelcomeScreenComponent } from './components/welcome-screen/welcome-screen.component';
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+
+export function HttpLoaderFactory(http : HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -28,7 +34,15 @@ import { WelcomeScreenComponent } from './components/welcome-screen/welcome-scre
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]

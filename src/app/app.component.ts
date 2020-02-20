@@ -12,7 +12,10 @@ export class AppComponent implements OnInit{
   showAboutSkills: boolean = false;
   showContact: boolean = false;
 
-  constructor(private _mainServiceService: MainServiceService) { }
+  constructor(private _mainServiceService: MainServiceService) {
+
+
+  }
 
   ngOnInit(): void {
     this._mainServiceService.showAboutMe.subscribe( res => {

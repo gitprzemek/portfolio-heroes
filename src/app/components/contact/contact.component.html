@@ -9,41 +9,41 @@
   <div class="corner-line corner-line--rb"></div>
   <div class="contact__content">
     <div class="contact__box contact__box--1">
-      <h2>Contact</h2>
+      <h2>{{'MAIN_SITE.CONTACT' | translate}}</h2>
     </div>
     <div class="contact__box contact__box--2">
       <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="contact__form" autocomplete="off">
         <div class="form__field">
-          <label for="title" class="form__label">Title</label>
+          <label for="title" class="form__label">{{'CONTACT.TITLE' | translate}}</label>
           <input #title="ngModel" name="title" id="title" type="text"
                  class="form__input" minlength="3" maxlength="50"
-                 placeholder="Title of your message..."
+                 [placeholder]="'CONTACT.PLACEHOLDERS.TITLE' | translate"
                  ngModel required>
-          <div class="form__error" *ngIf="contactForm.submitted && title.invalid">Title is required.</div>
-          <div class="form__error" *ngIf="contactForm.submitted && title.value?.length < 3">The minimum number of characters is 3.</div>
+          <div class="form__error" *ngIf="contactForm.submitted && title.invalid">{{'CONTACT.ERRORS.TITLE1' | translate}}</div>
+          <div class="form__error" *ngIf="contactForm.submitted && title.value?.length < 3">{{'CONTACT.ERRORS.TITLE2' | translate}}</div>
         </div>
         <div class="form__field">
-          <label for="from" class="form__label">Your email</label>
+          <label for="from" class="form__label">{{'CONTACT.YOUR_EMAIL' | translate}}</label>
           <input #from="ngModel" name="from" id="from" type="email"
                  class="form__input"
-                 placeholder="Your email..."
+                 [placeholder]="'CONTACT.PLACEHOLDERS.MAIL' | translate"
                  ngModel required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
-          <div class="form__error" *ngIf="contactForm.submitted && from.invalid">Email is required.</div>
-          <div class="form__error" *ngIf="contactForm.submitted && from.errors?.pattern">Email format should be: xxx@xxx.xxx</div>
+          <div class="form__error" *ngIf="contactForm.submitted && from.invalid">{{'CONTACT.ERRORS.MAIL1' | translate}}</div>
+          <div class="form__error" *ngIf="contactForm.submitted && from.errors?.pattern">{{'CONTACT.ERRORS.MAIL2' | translate}}</div>
         </div>
         <div class="form__field">
-          <label for="message" class="form__label">Your message</label>
+          <label for="message" class="form__label">{{'CONTACT.MESSAGE' | translate}}</label>
           <textarea #message="ngModel" name="message" id="message"
                     class="form__input form__input--textarea"
-                    placeholder="Your message..."
+                    [placeholder]="'CONTACT.PLACEHOLDERS.MESSAGE' | translate"
                     ngModel required minlength="10" maxlength="300"></textarea>
-          <div class="form__error" *ngIf="contactForm.submitted && message.invalid">Message is required.</div>
-          <div class="form__error" *ngIf="contactForm.submitted && message.value?.length < 10">The minimum number of characters is 10. (max 300)</div>
+          <div class="form__error" *ngIf="contactForm.submitted && message.invalid">{{'CONTACT.ERRORS.MSG1' | translate}}</div>
+          <div class="form__error" *ngIf="contactForm.submitted && message.value?.length < 10">{{'CONTACT.ERRORS.MSG2' | translate}}</div>
         </div>
         <app-action-field class="form__button" [type]="'button'" [content]="'Send'"></app-action-field>
       </form>
-      <div *ngIf="showMessageSuccess">Email has been sent.</div>
-      <div *ngIf="showMessageError">Error sending. Please fill out the fields correctly.</div>
+      <div *ngIf="showMessageSuccess">{{'CONTACT.CONFIRM' | translate}}</div>
+      <div *ngIf="showMessageError">{{'CONTACT.ERRORS.MAIN_ERROR' | translate}}</div>
       <div *ngIf="showMessageErrorPost">Error sending. Http error({{showMessageErrorPost}})</div>
     </div>
     <div class="contact__box contact__box--3">

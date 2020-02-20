@@ -9,11 +9,15 @@ import {AboutProjects} from "../../shared/content/AboutProjects";
 })
 export class AboutProjectsComponent implements OnInit {
   projectsData = AboutProjects;
-  constructor(private _mainServiceService: MainServiceService) { }
+  selectedLanguage = 'en';
+  constructor(private _mainService: MainServiceService) { }
 
   ngOnInit() {
+    this._mainService.selectedLang.subscribe( res => {
+      this.selectedLanguage = res;
+    });
   }
   closeWindow(): void {
-    this._mainServiceService.showAboutProjects.next(false);
+    this._mainService.showAboutProjects.next(false);
   }
 }

@@ -8,26 +8,28 @@ import {MainServiceService} from "../../shared/services/main-service.service";
 })
 export class NavigationPanelComponent implements OnInit {
   playMusic: boolean = false;
-  constructor(private _mainServiceService: MainServiceService) {
+  selectedLanguage = 'en';
+  constructor(private _mainService: MainServiceService) {
   }
 
   ngOnInit(): void {
+
   }
 
   openAboutMe(): void {
-    this._mainServiceService.showAboutMe.next(true);
+    this._mainService.showAboutMe.next(true);
   }
 
   openAboutSkills(): void {
-    this._mainServiceService.showAboutSkills.next(true);
+    this._mainService.showAboutSkills.next(true);
   }
 
   openAboutProjects(): void {
-    this._mainServiceService.showAboutProjects.next(true);
+    this._mainService.showAboutProjects.next(true);
   }
 
   openContact(): void {
-    this._mainServiceService.showContact.next(true);
+    this._mainService.showContact.next(true);
   }
 
   toggleMusic(music, type): void {
@@ -38,5 +40,13 @@ export class NavigationPanelComponent implements OnInit {
       music.pause();
       this.playMusic = type;
     }
+  }
+  enterToWelcomeScreenFn(data: boolean): void {
+    this._mainService.enterToApp.next(data);
+  }
+  changeLanguageFn(lang): void {
+    this.selectedLanguage = lang;
+    this._mainService.translate.use(lang);
+    this._mainService.selectedLang.next(lang);
   }
 }

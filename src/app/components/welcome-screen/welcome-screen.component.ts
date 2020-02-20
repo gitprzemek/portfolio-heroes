@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MainServiceService} from "../../shared/services/main-service.service";
 
 @Component({
   selector: 'app-welcome-screen',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeScreenComponent implements OnInit {
   enterToApp = false;
-  constructor() { }
+  constructor(private _mainServiceService: MainServiceService) { }
 
   ngOnInit() {
+    this._mainServiceService.enterToApp.subscribe( res => {
+      this.enterToApp = res;
+    });
   }
-  enterToAppFn(): void {
-    this.enterToApp = true;
+
+  enterToAppFn(data: boolean): void {
+    this._mainServiceService.enterToApp.next(data);
   }
 
 }

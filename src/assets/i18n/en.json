@@ -1,0 +1,66 @@
+{
+  "MAIN_SITE": {
+    "CITY_NAME": "Cracow",
+    "ABOUT_ME": "About me",
+    "MY_PROJECTS": "My projects",
+    "MY_SKILLS": "My skills",
+    "CONTACT": "Contact",
+    "MUSIC_ON": "Music is ON",
+    "MUSIC_OFF": "Music is OFF",
+    "SOUND": "Sound is ON",
+    "LANGUAGE": "Language : ENG",
+    "BACK": "Back"
+  },
+  "ABOUT_ME": {
+    "DESCRIPTION": "Hello! My name is PRZEMYSŁAW SZCZEPAŃSKI and I am a front-end developer. A graduate of the Kielce University of Technology. I've always wanted to do what I like, so I do everything to do it! In my free time I relax while watching a comedy, for example with Jim Carrey or I care that my body will still look and fit my old clothes. In addition, a great fan of Blizzard, old classic games and movies."
+  },
+  "MY_PROJECTS": {
+    "BTN_DEMO": "DEMO",
+    "BTN_CODE": "CODE",
+    "PROJECT1": {
+      "TITLE": "Portfolio",
+      "DESCRIPTION": "My portfolio page inspired by Heroes of Might & Magic 3 game."
+    },
+    "PROJECT2": {
+      "TITLE": "U duzego kowboja",
+      "DESCRIPTION": "Commercial project commissioned by a local restaurant."
+    },
+    "PROJECT3": {
+      "TITLE": "Old portfolio",
+      "DESCRIPTION": "My old portfolio project"
+    },
+    "PROJECT4": {
+      "TITLE": "My movie library",
+      "DESCRIPTION": "An application containing movie lists based on the TMDB API, and on my own project made in Adobe XD."
+    },
+    "PROJECT5": {
+      "TITLE": "Avengers vs Thanos",
+      "DESCRIPTION": "Memory card game, inspired by the theme of the movie Avengers: Infinity War."
+    },
+    "PROJECT6": {
+      "TITLE": "Warcraft clock",
+      "DESCRIPTION": "Disc clock in the style of World of Warcraft game."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Title",
+    "YOUR_EMAIL": "Your email",
+    "MESSAGE": "Your message",
+    "BTN_SEND": "Send",
+    "ERRORS": {
+      "TITLE1": "Title is required.",
+      "TITLE2": "The minimum number of characters is 3.",
+      "MAIL1": "Email is required.",
+      "MAIL2": "Email format should be: xxx@xxx.xxx",
+      "MSG1": "Message is required.",
+      "MSG2": "The minimum number of characters is 10. (max 300)",
+      "MAIN_ERROR": "Error sending. Please fill out the fields correctly."
+    },
+    "CONFIRM": "Email has been sent.",
+    "PLACEHOLDERS": {
+      "TITLE": "Title of your message...",
+      "MAIL": "Your email...",
+      "MESSAGE": "Your message..."
+    }
+  }
+}

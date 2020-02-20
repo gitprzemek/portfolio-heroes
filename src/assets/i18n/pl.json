@@ -1,0 +1,66 @@
+{
+  "MAIN_SITE": {
+    "CITY_NAME": "Kraków",
+    "ABOUT_ME": "O mnie",
+    "MY_PROJECTS": "Moje projekty",
+    "MY_SKILLS": "Moje umiejętności",
+    "CONTACT": "Kontakt",
+    "MUSIC_ON": "Muzyka włączona",
+    "MUSIC_OFF": "Muzyka wyłączona",
+    "SOUND": "Dźwięk wyłączony",
+    "LANGUAGE": "Język : PL",
+    "BACK": "Powrót"
+  },
+  "ABOUT_ME": {
+    "DESCRIPTION": "Cześć! Nazywam się PRZEMYSŁAW SZCZEPAŃSKI i jestem front-end developerem. Absolwent Politechniki Świętokrzyskiej I stopnia. Zawsze chciałem zajmować się tym co lubię, a zatem robię wszystko by to robić! W wolnej chwili relaksuję się przy oglądaniu komedii np. z Jimem Carreyem lub dbam o to by ciało nadal wyglądało i pasowało do moich starych ubrań. Oprócz tego wielki fan firmy Blizzard, a w szczególności ich klasycznych tytułów."
+  },
+  "MY_PROJECTS": {
+    "BTN_DEMO": "DEMO",
+    "BTN_CODE": "KOD",
+    "PROJECT1": {
+      "TITLE": "Portfolio",
+      "DESCRIPTION": "Moja strona portfolio inspirowana grą Heroes of Might & Magic 3 game."
+    },
+    "PROJECT2": {
+      "TITLE": "U duzego kowboja",
+      "DESCRIPTION": "Commercial project commissioned by a local restaurant."
+    },
+    "PROJECT3": {
+      "TITLE": "Old portfolio",
+      "DESCRIPTION": "My old portfolio project"
+    },
+    "PROJECT4": {
+      "TITLE": "My movie library",
+      "DESCRIPTION": "An application containing movie lists based on the TMDB API, and on my own project made in Adobe XD."
+    },
+    "PROJECT5": {
+      "TITLE": "Avengers vs Thanos",
+      "DESCRIPTION": "Memory card game, inspired by the theme of the movie Avengers: Infinity War."
+    },
+    "PROJECT6": {
+      "TITLE": "Warcraft clock",
+      "DESCRIPTION": "Disc clock in the style of World of Warcraft game."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Tytuł",
+    "YOUR_EMAIL": "Twój email",
+    "MESSAGE": "Twoja wiadomość",
+    "BTN_SEND": "Wyślij",
+    "ERRORS": {
+      "TITLE1": "Tytuł jest wymagany.",
+      "TITLE2": "Minimalna ilość znaków to 3.",
+      "MAIL1": "Email jest wymagany.",
+      "MAIL2": "Format maila powinien być: xxx@xxx.xxx",
+      "MSG1": "Wiadomość jest wymagana.",
+      "MSG2": "Minimalna ilość znaków wiadomośći to 10. (max 300)",
+      "MAIN_ERROR": "Błąd wysyłania. Proszę wypełnić poprawnie wszystkie pola."
+    },
+    "CONFIRM": "Email został wysłany!",
+    "PLACEHOLDERS": {
+      "TITLE": "Tytuł Twojej wiadomości...",
+      "MAIL": "Twój adres email...",
+      "MESSAGE": "Twoja wiadomość..."
+    }
+  }
+}

@@ -8,7 +8,7 @@
   <div class="corner-line corner-line--rb"></div>
   <div class="about-projects__content">
     <div class="about-projects__box about-projects__box--1">
-      <h2>My projects</h2>
+      <h2>{{'MAIN_SITE.MY_PROJECTS' | translate}}</h2>
     </div>
     <div class="about-projects__box about-projects__box--2">
       <div class="about-projects__tiles-cont">
@@ -16,16 +16,16 @@
           <div class="about-projects__first-border">
             <div class="about-projects__sec-border">
               <div class="about-projects__tile-col about-projects__tile-col--1">
-                <span class="about-projects__tile-title">{{project.title.en}}</span>
-                <app-action-field class="about-projects__tile-desc" [type]="'text'" [content]="project.description.en"></app-action-field>
+                <span class="about-projects__tile-title">{{project.title[selectedLanguage]}}</span>
+                <app-action-field class="about-projects__tile-desc" [type]="'text'" [content]="project.description[selectedLanguage]"></app-action-field>
                 <div class="about-projects__tile-links">
                   <app-action-field class="about-projects__tile-link"
                                     [type]="'button-link-text'"
-                                    [content]="'DEMO'"
+                                    [content]="'MY_PROJECTS.BTN_DEMO' | translate"
                                     [link]="project.links.demo"></app-action-field>
                   <app-action-field class="about-projects__tile-link"
                                     [type]="'button-link-text'"
-                                    [content]="'CODE'"
+                                    [content]="'MY_PROJECTS.BTN_CODE' | translate"
                                     [link]="project.links.repo"></app-action-field>
 
                 </div>
@@ -54,4 +54,5 @@
       </div>
     </div>
   </div>
+
 </section>
