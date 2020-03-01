@@ -60,13 +60,15 @@
         <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'MAIN_SITE.CONTACT' | translate" (click)="openContact()"></app-action-field>
       </div>
     </div>
+
     <div class="navigation-panel__right-container">
-      <div id="player">
+      <div id="player" hidden>
         <audio hidden loop #music>
           <source src="../../../assets/music/music-file.mp3" type="audio/mpeg">
           If you're reading this, audio isn't supported.
         </audio>
       </div>
+
       <app-action-field class="navigation-panel__right-button"
                         [type]="'button'" [content]="'MAIN_SITE.MUSIC_OFF' | translate"
                         (click)="toggleMusic(music, true)"
@@ -75,7 +77,6 @@
                         [type]="'button'" [content]="'MAIN_SITE.MUSIC_ON' | translate"
                         (click)="toggleMusic(music, false)"
                         *ngIf="playMusic"></app-action-field>
-      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'MAIN_SITE.SOUND' | translate"></app-action-field>
       <app-action-field class="navigation-panel__right-button"
                         [type]="'button'"
                         [content]="'MAIN_SITE.LANGUAGE' | translate"
