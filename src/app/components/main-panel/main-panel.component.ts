@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {MainServiceService} from "../../shared/services/main-service.service";
 
 @Component({
   selector: 'app-main-panel',
   templateUrl: './main-panel.component.html',
-  styleUrls: ['./main-panel.component.scss']
+  styleUrls: ['./main-panel.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MainPanelComponent implements OnInit {
 

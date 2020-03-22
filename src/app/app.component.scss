@@ -1,12 +1,26 @@
+@import "src/app/shared/styles/main.scss";
 
 .main-site-wrapper {
-  width: 1536px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   min-height: 100vh;
+}
+
+.main-site-center-wrapper {
+  width: 1536px;
+  //min-height: 931px;
+  height: auto;
+  max-height: 931px;
   margin: 0 auto;
   padding: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
+  @include small-desktop {
+    width: 1366px;
+  }
 
 
 
@@ -36,14 +50,18 @@
     transform: scaleX(-1);
   }
 }
+
 .app-main {
   height: 699px;
-
+  @include small-desktop {
+    height: 612px;
+  }
 }
 .app-navigation {
   flex: 1 1 auto;
   display: flex;
   position: relative;
+  max-height: 192px;
 }
 .bottom-line {
   position: absolute;
