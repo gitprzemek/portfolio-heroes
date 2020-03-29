@@ -11,6 +11,8 @@ export class MainServiceService {
   showAboutSkills: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   showContact: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
+  showMenuPanel: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
   enterToApp: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   selectedLang: BehaviorSubject<string> = new BehaviorSubject<string>('en');
 

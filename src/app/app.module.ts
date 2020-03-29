@@ -14,6 +14,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { WelcomeScreenComponent } from './components/welcome-screen/welcome-screen.component';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 
 export function HttpLoaderFactory(http : HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,7 +30,8 @@ export function HttpLoaderFactory(http : HttpClient) {
     AboutSkillsComponent,
     AboutProjectsComponent,
     ContactComponent,
-    WelcomeScreenComponent
+    WelcomeScreenComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,

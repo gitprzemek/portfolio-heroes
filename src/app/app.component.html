@@ -10,9 +10,13 @@
     <div class="corner-line corner-line--lb"></div>
     <div class="corner-line corner-line--rt"></div>
     <div class="corner-line corner-line--rb"></div>
+    <div class="content-wrapper">
+      <app-main-panel class="app-main"></app-main-panel>
 
-    <app-main-panel class="app-main"></app-main-panel>
-    <app-navigation-panel class="app-navigation"></app-navigation-panel>
+      <app-navigation-panel class="app-navigation" [class.showMenu]="showMenuPanel"></app-navigation-panel>
+      <app-navigation-bar class="app-navigation-bar"></app-navigation-bar>
+    </div>
+
     <app-about-me class="component component--about-me" *ngIf="showAboutMe"></app-about-me>
     <app-about-projects class="component component--about-projects" *ngIf="showAboutProjects"></app-about-projects>
     <app-about-skills class="component component--about-skills" *ngIf="showAboutSkills"></app-about-skills>

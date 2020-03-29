@@ -11,6 +11,7 @@ export class AppComponent implements OnInit{
   showAboutProjects: boolean = false;
   showAboutSkills: boolean = false;
   showContact: boolean = false;
+  showMenuPanel: boolean = false;
 
   constructor(private _mainServiceService: MainServiceService) {
 
@@ -29,6 +30,9 @@ export class AppComponent implements OnInit{
     });
     this._mainServiceService.showContact.subscribe( res => {
       this.showContact = res;
+    });
+    this._mainServiceService.showMenuPanel.subscribe( res => {
+      this.showMenuPanel = res;
     });
   }
 }

@@ -17,9 +17,9 @@
                               [type]="'button-img'"
                               [content]="'../../../assets/images/hands.png'"
                               [link]="'https://github.com/gitprzemek'" (click)="openContact()"></app-action-field>
-            <div class="left-container__trb-field left-container__trb-field--img-gold">
-              <img class="left-container__img-gold" src="../../../assets/images/gold2.png" alt="gold">
-            </div>
+<!--            <div class="left-container__trb-field left-container__trb-field&#45;&#45;img-gold">-->
+<!--              <img class="left-container__img-gold" src="../../../assets/images/gold2.png" alt="gold">-->
+<!--            </div>-->
           </div>
         </div>
       </div>
@@ -89,8 +89,16 @@
                         *ngIf="selectedLanguage === 'pl'"
                         (click)="changeLanguageFn('en')">
       </app-action-field>
-      <app-action-field class="navigation-panel__right-button" [type]="'button'" [content]="'MAIN_SITE.BACK' | translate"
-      (click)="enterToWelcomeScreenFn(false)"></app-action-field>
+      <app-action-field class="navigation-panel__right-button"
+                        [type]="'button'"
+                        [content]="'MAIN_SITE.BACK' | translate"
+                        (click)="enterToWelcomeScreenFn(false)">
+      </app-action-field>
+      <app-action-field class="navigation-panel__right-button"
+                        [type]="'button'"
+                        [content]="'MAIN_SITE.HIDE' | translate"
+                        (click)="hideMenuPanel()">
+      </app-action-field>
     </div>
   </div>
 </section>

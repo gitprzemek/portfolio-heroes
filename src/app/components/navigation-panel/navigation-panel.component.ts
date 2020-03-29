@@ -31,7 +31,9 @@ export class NavigationPanelComponent implements OnInit {
   openContact(): void {
     this._mainService.showContact.next(true);
   }
-
+  hideMenuPanel(): void {
+    this._mainService.showMenuPanel.next(false);
+  }
   toggleMusic(music, type): void {
     if (type) {
       music.play();
