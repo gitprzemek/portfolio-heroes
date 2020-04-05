@@ -91,6 +91,28 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 80%;
+      top: 50%;
+      background-image: url("../../../assets/images/ozdoba2.png");
+      background-repeat: no-repeat;
+    }
+    &::after {
+      right: -2px;
+      transform: translateY(-50%) scaleX(-1);
+      background-position: 0 0;
+      background-size: auto 100%;
+    }
+    &::before {
+      left: -2px;
+      transform: translateY(-50%);
+      background-position: 0 0;
+      background-size: auto 100%;
+    }
   }
   &__button-wrapper {
     width: 310px;
