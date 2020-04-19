@@ -16,6 +16,16 @@
     </div>
   </div>
 </ng-container>
+<ng-container *ngIf="type === 'textMulti'">
+  <div class="action__first-border action__first-border--text">
+    <div class="action__sec-border action__sec-border--text">
+      <div class="action__content action__content--text">
+        <span>{{content}}</span><br>-<br>
+        <span>{{content2}}</span>
+      </div>
+    </div>
+  </div>
+</ng-container>
 <ng-container *ngIf="type === 'button'">
   <div class="action__first-border action__first-border--button">
     <button class="action__sec-border action__sec-border--button">

@@ -158,6 +158,7 @@
       width: 100%;
       flex-direction: column;
       padding: 10px 0;
+      flex: 1;
     }
   }
   &__field-wrapper {
@@ -236,17 +237,18 @@
     align-items: center;
     @include phone {
       width: 100%;
+      padding: 10px 0;
     }
   }
   .left-container__top {
-    height: 95px;
+    height: 105px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
   .left-container__bottom {
-    height: auto;
+    height: 65px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -265,17 +267,26 @@
     justify-content: space-between;
   }
   .left-container__top-right-top {
-    height: 35%;
+    height: 33%;
+    ::ng-deep .action__content--text {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  .left-container__top-right-top--sub {
+    ::ng-deep .action__content--text {
+      font-size: 12px;
+    }
   }
   .left-container__top-right-bottom {
     height: 60%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
   }
   .left-container__trb-field {
-    width: 28%;
+    width: 100%;
+
   }
   .left-container__trb-field--long {
     width: 49%;
@@ -284,7 +295,7 @@
   }
   .left-container__bottom-field {
     width: 24%;
-    height: 65px;
+    height: 100%;
   }
   .left-container__trb-field--img-gold {
     width: 49%;
@@ -303,8 +314,8 @@
       color: #ffe794;
     }
     @include phone {
-      width: 105px;
-      height: 100%;
+      width: 85%;
+      height: 75%;
     }
   }
   .navigation-panel__center-image {
@@ -317,6 +328,11 @@
     height: 40px;
     ::ng-deep * {
       font-size: 18px;
+    }
+    @include phone {
+      width: 85%;
+      height: 35px;
+      margin: 0 0 3px;
     }
   }
 }
