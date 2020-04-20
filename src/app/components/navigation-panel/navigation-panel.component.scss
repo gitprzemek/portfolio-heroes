@@ -164,14 +164,22 @@
   &__field-wrapper {
     height: 100%;
     width: 150px;
+    max-width: unset;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
+    @include laptops {
+      max-width: 110px;
+      ::ng-deep .action__content {
+        font-size: 13px;
+      }
+    }
     @include phone {
       width: 100%;
       height: 70px;
+      max-width: unset;
     }
 
     &::before {
@@ -209,6 +217,9 @@
       background-position: 0 0;
       background-size: 100% auto;
       transform: translateX(-50%) scaleY(1);
+      @include laptops {
+        bottom: -6px;
+      }
       @include phone {
         left: unset;
         right: -1px;
@@ -222,6 +233,13 @@
       }
      }
   }
+  //&__field-wrapper--small-text {
+  //  ::ng-deep .action__content--button {
+  //    @include laptops {
+  //      font-size: 13px;
+  //    }
+  //  }
+  //}
   &__field-wrapper--image {
     display: flex;
 
@@ -248,7 +266,8 @@
     justify-content: space-between;
   }
   .left-container__bottom {
-    height: 65px;
+    height: 100%;
+    margin: 5px 0 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -258,6 +277,9 @@
   .left-container__top-left {
     width: 27%;
     height: 100%;
+    @include laptops {
+      display: none;
+    }
   }
   .left-container__top-right {
     width: 71%;
@@ -265,12 +287,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include laptops {
+      width: 100%;
+    }
   }
   .left-container__top-right-top {
     height: 33%;
     ::ng-deep .action__content--text {
       font-size: 14px;
       text-align: center;
+      @include small-desktop {
+        font-size: 12px;
+      }
+      //@include laptops {
+      //  font-size: 9px;
+      //}
     }
   }
   .left-container__top-right-top--sub {
@@ -313,6 +344,9 @@
     ::ng-deep *{
       color: #ffe794;
     }
+    @include laptops {
+      font-size: 12px;
+    }
     @include phone {
       width: 85%;
       height: 75%;
@@ -328,6 +362,11 @@
     height: 40px;
     ::ng-deep * {
       font-size: 18px;
+    }
+    @include laptops {
+      ::ng-deep * {
+        font-size: 11px;
+      }
     }
     @include phone {
       width: 85%;
