@@ -1,3 +1,4 @@
+@import "src/app/shared/styles/main.scss";
 .navigation-panel-bar {
   position: relative;
   width: 100%;
@@ -120,6 +121,9 @@
     background-color: transparent;
     border: 3px solid #dfd074;
     position: relative;
+    @include phone {
+      width: 194px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -145,6 +149,9 @@
       background-position: 0 0;
       background-size: 100% auto;
       transform: translateX(-50%) scaleY(-1);
+      @include phone {
+        bottom: -14px;
+      }
     }
   }
   &__button-img {
@@ -184,6 +191,9 @@
     cursor: pointer;
     position: relative;
     outline: none;
+    @include phone {
+      font-size: 21px;
+    }
     &:active:hover {
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../assets/images/menu-button.jpg") no-repeat;
       background-size: cover;

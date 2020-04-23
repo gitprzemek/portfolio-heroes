@@ -84,7 +84,7 @@
     flex-wrap: nowrap;
     overflow: hidden;
 
-    @include phone {
+    @include tablets {
       flex-direction: column;
       justify-content: space-between;
     }
@@ -96,6 +96,9 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 5px 11px 5px 5px;
+    @include tablets {
+      padding: 5px 11px 11px 11px;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -107,7 +110,7 @@
       background-repeat: repeat-y;
       background-position: 0 0;
       background-size: 100% auto;
-      @include phone {
+      @include tablets {
         right: unset;
         top: unset;
         bottom: 0;
@@ -119,7 +122,7 @@
         background-size: auto 100%;
       }
     }
-    @include phone {
+    @include tablets {
       width: 100%;
     }
   }
@@ -131,6 +134,16 @@
     justify-content: space-evenly;
     position: relative;
     padding: 0 16px 0 10px;
+    @include tablets {
+      width: 100%;
+      flex-direction: column;
+      padding: 10px 0;
+      flex: 1;
+    }
+    @include phone {
+      justify-content: center;
+      padding: 5px 0 10px;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -142,7 +155,7 @@
       background-repeat: repeat-y;
       background-position: 0 0;
       background-size: 100% auto;
-      @include phone {
+      @include tablets {
         right: unset;
         top: unset;
         bottom: 0;
@@ -154,12 +167,7 @@
         background-size: auto 100%;
       }
     }
-    @include phone {
-      width: 100%;
-      flex-direction: column;
-      padding: 10px 0;
-      flex: 1;
-    }
+
   }
   &__field-wrapper {
     height: 100%;
@@ -176,10 +184,19 @@
         font-size: 13px;
       }
     }
-    @include phone {
+    @include tablets {
       width: 100%;
       height: 70px;
       max-width: unset;
+      ::ng-deep .action__content {
+        font-size: 18px;
+      }
+    }
+    @include phone {
+      height: 50px;
+      ::ng-deep .action__content {
+        font-size: 16px;
+      }
     }
 
     &::before {
@@ -194,7 +211,7 @@
       background-position: 0 100%;
       background-size: 100% auto;
       transform: translate(-50%, 0) scaleY(-1);
-      @include phone {
+      @include tablets {
         left: 1px;
         top: 50%;
         width: 20px;
@@ -220,7 +237,7 @@
       @include laptops {
         bottom: -6px;
       }
-      @include phone {
+      @include tablets {
         left: unset;
         right: -1px;
         top: 50%;
@@ -243,7 +260,7 @@
   &__field-wrapper--image {
     display: flex;
 
-    @include phone {
+    @include tablets {
       display: none;
     }
   }
@@ -253,9 +270,14 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    @include phone {
+    @include tablets {
       width: 100%;
       padding: 10px 0;
+    }
+    @include small-phone {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
   .left-container__top {
@@ -264,6 +286,9 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    @include phone {
+      height: 96px;
+    }
   }
   .left-container__bottom {
     height: 100%;
@@ -299,15 +324,25 @@
       @include small-desktop {
         font-size: 12px;
       }
-      //@include laptops {
-      //  font-size: 9px;
-      //}
+      @include tablets {
+        font-size: 14px;
+      }
+      @include phone {
+        font-size: 12px;
+      }
     }
   }
   .left-container__top-right-top--sub {
     ::ng-deep .action__content--text {
       font-size: 12px;
+      @include tablets {
+          font-size: 14px;
+      }
+      @include phone {
+        font-size: 11px;
+      }
     }
+
   }
   .left-container__top-right-bottom {
     height: 60%;
@@ -347,7 +382,7 @@
     @include laptops {
       font-size: 12px;
     }
-    @include phone {
+    @include tablets {
       width: 85%;
       height: 75%;
     }
@@ -355,7 +390,6 @@
   .navigation-panel__center-image {
     width: 105px;
     height: 110px;
-
   }
   .navigation-panel__right-button {
     width: 95%;
@@ -368,10 +402,20 @@
         font-size: 11px;
       }
     }
-    @include phone {
+    @include tablets {
       width: 85%;
       height: 35px;
       margin: 0 0 3px;
+      ::ng-deep * {
+        font-size: 14px;
+      }
     }
   }
+  @include small-phone {
+    .navigation-panel__right-button:nth-child(4),
+    .navigation-panel__right-button:nth-child(5) {
+      width: 43%;
+    }
+  }
+
 }

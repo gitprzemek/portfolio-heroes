@@ -117,6 +117,14 @@
   @include laptops {
     width: 60%;
   }
+  @include tablets {
+    width: 40%;
+    margin: 5px;
+  }
+  @include phone {
+    width: 47%;
+    margin: 4px;
+  }
 }
 .action__button-img {
   width: auto;
