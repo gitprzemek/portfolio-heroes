@@ -1,3 +1,5 @@
+@import "src/app/shared/styles/main.scss";
+
 .background-blur {
   position: absolute;
   width: 100vw;
@@ -25,6 +27,8 @@
   background-size: 300px auto;
   color: #fff4e3;
   text-shadow: 2px 2px #000000;
+  height: 100vh;
+  width: 100vw;
   &::before {
     content: '';
     position: absolute;
@@ -105,8 +109,12 @@
   }
 }
 .about-me {
-  width: 55%;
-  height: 95%;
+  max-width: 800px;
+  max-height: 840px;
+  @include small-desktop {
+    max-width: 780px;
+    max-height: 730px;
+  }
 }
 .about-me__content {
   width: 100%;
@@ -118,6 +126,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include phone {
+    overflow-y: scroll;
+  }
 }
 .about-me__box {
   display: flex;
@@ -162,6 +173,11 @@
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/bg1.png") repeat  center center;
   background-size: 350px auto;
   margin: 25px 0;
+  @include phone {
+    margin: 0;
+    font-size: 14px;
+    height: 100%;
+  }
 }
 .about-me__photo-cont {
   width: 100%;
@@ -209,11 +225,19 @@
   width: 140px;
   height: 168px;
   margin: 15px 5px;
+  @include phone {
+    width: 90px;
+    height: 112px;
+    margin: 10px 2px;
+  }
 }
 .about-me__photo-img-badge {
   height: 140px;
   width: auto;
   margin: 15px 5px;
+  @include phone {
+    height: 55px;
+  }
 }
 .about-me__photo-text {
   height: 70px;
@@ -230,6 +254,13 @@
   background: rgba(0, 0, 0, 0.02);
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/bg1.png") repeat  center center;
   background-size: 350px auto;
+  @include phone {
+    text-align: center;
+    height: 54px;
+    width: 92%;
+    font-size: 14px;
+    margin: 5px auto 10px;
+  }
 }
 
 .about-me__actions-cont {
@@ -247,6 +278,9 @@
 }
 .about-me__box--4 {
   height: auto;
+  @include phone {
+    margin: 10px 0;
+  }
 }
 .about-me__box--5 {
   align-items: flex-end;

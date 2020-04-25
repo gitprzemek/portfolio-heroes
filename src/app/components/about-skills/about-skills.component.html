@@ -8,9 +8,11 @@
   <div class="corner-line corner-line--rb"></div>
   <div class="about-skills__content">
 
-    <div class="about-skills__box about-skills__box--1">
+    <div class="about-skills__box about-skills__box--1" id="imgElement">
       <div class="about-skills__window-bg"
            [ngStyle]="{'transform': 'translate(-' + widthPercent + '%, ' + '-' + heightPercent + '%)'}">
+      </div>
+      <div class="about-skills__window-bg2">
       </div>
       <span class="about-skills__logo about-skills__logo--1" (mouseover)="passTextToInput('Javascript')" (mouseout)="passTextToInput('')"></span>
       <span class="about-skills__logo about-skills__logo--2" (mouseover)="passTextToInput('CSS3')" (mouseout)="passTextToInput('')"></span>

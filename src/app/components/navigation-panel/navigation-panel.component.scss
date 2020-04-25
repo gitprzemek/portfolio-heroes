@@ -212,7 +212,7 @@
       background-size: 100% auto;
       transform: translate(-50%, 0) scaleY(-1);
       @include tablets {
-        left: 1px;
+        left: 0;
         top: 50%;
         width: 20px;
         height: 80%;
@@ -239,7 +239,7 @@
       }
       @include tablets {
         left: unset;
-        right: -1px;
+        right: 0;
         top: 50%;
         width: 20px;
         height: 80%;

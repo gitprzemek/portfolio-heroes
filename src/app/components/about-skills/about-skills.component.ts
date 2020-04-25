@@ -13,10 +13,12 @@ export class AboutSkillsComponent implements OnInit {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e) {
-    const height = (e.clientY / e.view.innerHeight) * 100;
-    this.heightPercent = 49 + ((height / 100) * 4);
-    const width = (e.clientX / e.view.innerWidth) * 100;
-    this.widthPercent = 46 + ((width / 100) * 10);
+    if (document.body.clientWidth > 599) {
+      const height = (e.clientY / e.view.innerHeight) * 100;
+      this.heightPercent = 49 + ((height / 100) * 4);
+      const width = (e.clientX / e.view.innerWidth) * 100;
+      this.widthPercent = 46 + ((width / 100) * 10);
+    }
   }
   constructor(private _mainServiceService: MainServiceService) { }
 
