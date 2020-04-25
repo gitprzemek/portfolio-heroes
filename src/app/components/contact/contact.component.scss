@@ -1,58 +1,4 @@
-.background-blur {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  min-width: 100%;
-  min-height: 100%;
-  filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
-}
-.section {
-  position: relative;
-  background-color: #fff4e3;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-shadow: 10px 10px 4px 0 rgba(0,0,0,0.74);
-  -moz-box-shadow: 10px 10px 4px 0 rgba(0,0,0,0.74);
-  box-shadow: 10px 10px 4px 0 rgba(0,0,0,0.74);
-  background-image: url("../../../assets/images/bg1-red.png");
-  background-repeat: repeat;
-  background-position: top left;
-  background-size: 300px auto;
-  color: #fff4e3;
-  text-shadow: 2px 2px #000000;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: calc(100% - 34px);
-    left: 0;
-    top: 17px;
-    background-image: url("../../../assets/images/linetransp.png");
-    background-repeat: repeat-y;
-    background-position: top left;
-    background-size: 100% auto;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: calc(100% - 34px);
-    right: 0;
-    top: 17px;
-    background-image: url("../../../assets/images/linetransp.png");
-    background-repeat: repeat-y;
-    background-position: top left;
-    background-size: 100% auto;
-    transform: scaleX(-1);
-  }
 
-
-}
 .bottom-line {
   position: absolute;
   width: calc(100% - 34px);
@@ -113,6 +59,8 @@
   height: 90%;
   position: relative;
   background-color: #fff4e3;
+  color: #fff4e3;
+  text-shadow: 2px 2px #000000;
 }
 .contact__content {
   width: 100%;
