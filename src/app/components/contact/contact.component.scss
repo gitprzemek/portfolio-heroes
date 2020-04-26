@@ -1,77 +1,28 @@
-
-.bottom-line {
-  position: absolute;
-  width: calc(100% - 34px);
-  height: 20px;
-  left: 17px;
-  bottom: 0;
-  background-image: url("../../../assets/images/linetransp2.png");
-  background-repeat: repeat-x;
-  background-position: top left;
-  background-size: auto 100%;
-  transform: scaleY(-1);
-}
-.top-line {
-  position: absolute;
-  width: calc(100% - 34px);
-  height: 20px;
-  left: 17px;
-  top: 0;
-  background-image: url("../../../assets/images/linetransp2.png");
-  background-repeat: repeat-x;
-  background-position: top left;
-  background-size: auto 100%;
-}
-.corner-line {
-  position: absolute;
-  width: 85px;
-  height: 85px;
-  background-image: url("../../../assets/images/line&corners3.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 100%;
-  z-index: 2;
-  &--lt {
-    left: 0;
-    top: 0;
-    transform: rotate(90deg);
-  }
-  &--lb {
-    left: 0;
-    bottom: 0;
-    background-position: 0 100%;
-  }
-  &--rt {
-    right: 0;
-    top: 0;
-    transform: rotate(180deg);
-  }
-  &--rb {
-    right: 0;
-    bottom: 0;
-    transform: rotate(270deg);
-  }
-}
+@import "src/app/shared/styles/main.scss";
 
 .contact {
   width: 100%;
   max-width: 600px;
-  height: 90%;
+  max-height: 825px;
   position: relative;
   background-color: #fff4e3;
   color: #fff4e3;
   text-shadow: 2px 2px #000000;
+  @include small-desktop {
+    max-height: 700px;
+  }
 }
 .contact__content {
   width: 100%;
   height: 100%;
-  background-image: url("../../../assets/images/bg-img.png");
+  background-image: url("../../../assets/images/backgrounds/bg-img.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: auto;
 }
 .contact__box {
   display: flex;
@@ -126,10 +77,17 @@
   width: 100%;
   max-width: 380px;
   min-height: 80px;
+  @include phone {
+    min-height: 70px;
+  }
 }
 .form__label {
   margin: 20px 0 0;
   display: inline-block;
+  @include phone {
+    margin: 8px 0 0;
+    font-size: 12px;
+  }
 }
 .form__input {
   height: 40px;
@@ -144,14 +102,21 @@
   -moz-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   background: rgba(0, 0, 0, 0.02);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/bg1.png") repeat  center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/backgrounds/bg1.jpg") repeat  center center;
   background-size: 350px auto;
   color: #fff4e3;
   text-shadow: 2px 2px #000000;
   font-size: 17px;
+  @include phone {
+    height: 34px;
+    font-size: 14px;
+  }
   &::placeholder {
     font-size: 17px;
     letter-spacing: 1px;
+    @include phone {
+      font-size: 14px;
+    }
   }
   &:-webkit-autofill {
     text-shadow: none;
@@ -161,6 +126,9 @@
   height: 170px;
   resize: none;
   padding: 5px;
+  @include phone {
+    height: 130px;
+  }
 }
 .form__button {
   width: 140px;

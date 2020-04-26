@@ -20,7 +20,7 @@
   border-bottom: 3px solid rgba(0, 0, 0, 0.25);
   border-left: 3px solid rgba(255, 255, 255, 0.22);
   border-right: 3px solid rgba(0, 0, 0, 0.25);
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../../assets/images/bg1.png") repeat  102px 37px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../../assets/images/backgrounds/bg1.jpg") repeat  102px 37px;
   background-size: 228px auto;
   color: #fff4e3;
   text-shadow: 2px 2px #000000;
@@ -39,7 +39,7 @@
     border-bottom: 3px solid rgba(255, 255, 255, 0.12);
     border-left: 3px solid rgba(0, 0, 0, 0.25);
     border-right: 3px solid rgba(255, 255, 255, 0.12);
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/images/bg1.png") repeat  102px 37px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/images/backgrounds/bg1.jpg") repeat  102px 37px;
     background-size: 228px auto;
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@
     cursor: pointer;
 
     &:active:hover {
-      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../assets/images/bg1.png") repeat  102px 37px;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../assets/images/backgrounds/bg1.jpg") repeat  102px 37px;
       background-size: 228px auto;
       margin: 2px 0 0 2px;
       -webkit-box-shadow: -4px -4px 0px 4px rgba(0,0,0,0.8);

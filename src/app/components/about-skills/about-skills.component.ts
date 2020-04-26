@@ -7,8 +7,8 @@ import {MainServiceService} from "../../shared/services/main-service.service";
   styleUrls: ['./about-skills.component.scss']
 })
 export class AboutSkillsComponent implements OnInit {
-  heightPercent: number = 0;
-  widthPercent: number = 0;
+  heightPercent: number = 51;
+  widthPercent: number = 51;
   textFromLogo: string = '';
 
   @HostListener('document:mousemove', ['$event'])

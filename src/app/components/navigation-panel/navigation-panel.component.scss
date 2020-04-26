@@ -9,7 +9,7 @@
     position: absolute;
     width: 100%;
     height: 11px;
-    background-image: url("../../../assets/images/line-no1.png");
+    background-image: url("../../../assets/images/borders/line-no1.png");
     background-repeat: repeat-y;
     background-position: top left;
     background-size: 100% auto;
@@ -17,14 +17,14 @@
     &--top {
       top: 0;
       left: 0;
-      background-image: url("../../../assets/images/line-no12.png");
+      background-image: url("../../../assets/images/borders/line-no12.png");
       background-repeat: repeat-x;
       background-size: auto 100%;
     }
     &--bottom {
       bottom: 0;
       left: 0;
-      background-image: url("../../../assets/images/line-no12.png");
+      background-image: url("../../../assets/images/borders/line-no12.png");
       background-repeat: repeat-x;
       background-size: auto 100%;
     }
@@ -41,7 +41,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url("../../../assets/images/corner-no1.png");
+        background-image: url("../../../assets/images/borders/corner-no1.png");
         background-repeat: no-repeat;
         background-position: top left;
         background-size: 100%;
@@ -54,7 +54,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background-image: url("../../../assets/images/corner-no1.png");
+        background-image: url("../../../assets/images/borders/corner-no1.png");
         background-repeat: no-repeat;
         background-position: top left;
         background-size: 100%;
@@ -75,7 +75,7 @@
   }
   &__content {
     height: 100%;
-    background-image: url("../../../assets/images/bg1-red.png");
+    background-image: url("../../../assets/images/backgrounds/bg1-red.jpg");
     background-repeat: repeat;
     background-position: top left;
     background-size: 25% auto;
@@ -106,7 +106,7 @@
       top: 0;
       width: 6px;
       height: 100%;
-      background-image: url("../../../assets/images/small-border.png");
+      background-image: url("../../../assets/images/borders/small-border.png");
       background-repeat: repeat-y;
       background-position: 0 0;
       background-size: 100% auto;
@@ -117,7 +117,7 @@
         left: 0;
         width: 100%;
         height: 6px;
-        background-image: url("../../../assets/images/small-border-2.png");
+        background-image: url("../../../assets/images/borders/small-border-2.png");
         background-repeat: repeat-x;
         background-size: auto 100%;
       }
@@ -151,7 +151,7 @@
       top: 0;
       width: 6px;
       height: 100%;
-      background-image: url("../../../assets/images/small-border.png");
+      background-image: url("../../../assets/images/borders/small-border.png");
       background-repeat: repeat-y;
       background-position: 0 0;
       background-size: 100% auto;
@@ -162,7 +162,7 @@
         left: 0;
         width: 100%;
         height: 6px;
-        background-image: url("../../../assets/images/small-border-2.png");
+        background-image: url("../../../assets/images/borders/small-border-2.png");
         background-repeat: repeat-x;
         background-size: auto 100%;
       }
@@ -206,7 +206,7 @@
       top: -1px;
       width: 80%;
       height: 20px;
-      background-image: url("../../../assets/images/ozdoba1.png");
+      background-image: url("../../../assets/images/borders/ozdoba1.png");
       background-repeat: no-repeat;
       background-position: 0 100%;
       background-size: 100% auto;
@@ -216,7 +216,7 @@
         top: 50%;
         width: 20px;
         height: 80%;
-        background-image: url("../../../assets/images/ozdoba2.png");
+        background-image: url("../../../assets/images/borders/ozdoba2.png");
         background-position: 0 0;
         background-size: auto 100%;
         transform: translate(0, -50%)
@@ -229,7 +229,7 @@
       bottom: -1px;
       width: 80%;
       height: 20px;
-      background-image: url("../../../assets/images/ozdoba1.png");
+      background-image: url("../../../assets/images/borders/ozdoba1.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       background-size: 100% auto;
@@ -243,7 +243,7 @@
         top: 50%;
         width: 20px;
         height: 80%;
-        background-image: url("../../../assets/images/ozdoba2.png");
+        background-image: url("../../../assets/images/borders/ozdoba2.png");
         background-position: 0 0;
         background-size: auto 100%;
         transform: translate(0, -50%) scaleX(-1);
@@ -396,6 +396,11 @@
     height: 40px;
     ::ng-deep * {
       font-size: 18px;
+    }
+    @include small-desktop {
+      ::ng-deep * {
+        font-size: 14px;
+      }
     }
     @include laptops {
       ::ng-deep * {

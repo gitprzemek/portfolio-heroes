@@ -12,7 +12,7 @@
 .about-me__content {
   width: 100%;
   height: 100%;
-  background-image: url("../../../assets/images/bg-img.png");
+  background-image: url("../../../assets/images/backgrounds/bg-img.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -39,16 +39,16 @@
     letter-spacing: 2px;
   }
 }
-.about-me__gif-cont {
-  width: 50%;
-  height: 85%;
-  border: 2px solid #a58a42;
-  background-color: black;
-  background-image: url("../../../assets/images/coding1.gif");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% auto;
-}
+//.about-me__gif-cont {
+//  width: 50%;
+//  height: 85%;
+//  border: 2px solid #a58a42;
+//  background-color: black;
+//  background-image: url("../../../assets/images/coding1.gif");
+//  background-repeat: no-repeat;
+//  background-position: center center;
+//  background-size: 100% auto;
+//}
 .about-me__desc {
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@
   -moz-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   background: rgba(0, 0, 0, 0.02);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/bg1.png") repeat  center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/backgrounds/bg1.jpg") repeat  center center;
   background-size: 350px auto;
   margin: 25px 0;
   @include phone {
@@ -96,7 +96,7 @@
   border-bottom: 3px solid rgba(0, 0, 0, 0.25);
   border-left: 3px solid rgba(255, 255, 255, 0.22);
   border-right: 3px solid rgba(0, 0, 0, 0.25);
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../../assets/images/bg1.png") repeat 102px 37px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../../assets/images/backgrounds/bg1.jpg") repeat 102px 37px;
   background-size: 350px auto;
 }
 .about-me__photo-content {
@@ -145,7 +145,7 @@
   -moz-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   background: rgba(0, 0, 0, 0.02);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/bg1.png") repeat  center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/backgrounds/bg1.jpg") repeat  center center;
   background-size: 350px auto;
   @include phone {
     text-align: center;

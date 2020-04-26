@@ -19,7 +19,7 @@
   -webkit-box-shadow: 10px 10px 4px 0 rgba(0,0,0,0.74);
   -moz-box-shadow: 10px 10px 4px 0 rgba(0,0,0,0.74);
   box-shadow: 10px 10px 4px 0 rgba(0,0,0,0.74);
-  background-image: url("src/assets/images/bg1-red.png");
+  background-image: url("src/assets/images/backgrounds/bg1-red.jpg");
   background-repeat: repeat;
   background-position: top left;
   background-size: 300px auto;
@@ -34,7 +34,7 @@
     height: calc(100% - 34px);
     left: 0;
     top: 17px;
-    background-image: url("src/assets/images/linetransp.png");
+    background-image: url("src/assets/images/borders/linetransp.png");
     background-repeat: repeat-y;
     background-position: top left;
     background-size: 100% auto;
@@ -46,7 +46,7 @@
     height: calc(100% - 34px);
     right: 0;
     top: 17px;
-    background-image: url("src/assets/images/linetransp.png");
+    background-image: url("src/assets/images/borders/linetransp.png");
     background-repeat: repeat-y;
     background-position: top left;
     background-size: 100% auto;
@@ -59,7 +59,7 @@
   height: 20px;
   left: 17px;
   bottom: 0;
-  background-image: url("src/assets/images/linetransp2.png");
+  background-image: url("src/assets/images/borders/linetransp2.png");
   background-repeat: repeat-x;
   background-position: top left;
   background-size: auto 100%;
@@ -71,7 +71,7 @@
   height: 20px;
   left: 17px;
   top: 0;
-  background-image: url("src/assets/images/linetransp2.png");
+  background-image: url("src/assets/images/borders/linetransp2.png");
   background-repeat: repeat-x;
   background-position: top left;
   background-size: auto 100%;
@@ -80,11 +80,12 @@
   position: absolute;
   width: 85px;
   height: 85px;
-  background-image: url("src/assets/images/line&corners3.png");
+  background-image: url("src/assets/images/borders/line&corners3.png");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100%;
   z-index: 2;
+  pointer-events: none;
   &--lt {
     left: 0;
     top: 0;

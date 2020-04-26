@@ -11,6 +11,9 @@
     max-height: 750px;
     overflow: hidden;
   }
+  @include phone {
+    max-height: 100vh;
+  }
 
 }
 .about-skills__content {
@@ -21,7 +24,7 @@
   justify-content: space-between;
   position: relative;
   @include tablets {
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 }
 
@@ -110,7 +113,7 @@
   top: 0;
   height: 85%;
   width: 50%;
-  background-image: url("../../../assets/images/phone-bg.png");
+  background-image: url("../../../assets/images/backgrounds/phone-bg.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;

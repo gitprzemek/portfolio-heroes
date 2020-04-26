@@ -1,3 +1,4 @@
+@import "src/app/shared/styles/main.scss";
 .welcome {
   width: 100%;
   height: 100%;
@@ -19,7 +20,7 @@
     left: 0;
     top: 0;
     height: 400%;
-    width: 400%;
+    width: 1000%;
     transform-origin: 50% 50%;
   }
   @keyframes fog {
@@ -52,8 +53,8 @@
   .welcome__main-image {
     position: relative;
     height: 100%;
-    width: 850px;
-    min-width: 550px;
+    max-width: 850px;
+    //min-width: 550px;
     margin: 0 auto;
   }
 
@@ -71,6 +72,7 @@
     position: relative;
     width: 100%;
     height: 40%;
+    min-height: 380px;
     top: 60%;
     transform: translateY(-48px);
     opacity: 1;
@@ -82,12 +84,16 @@
     top: 0;
     left: 50%;
     width: 100%;
-    height: 100%;
+    height: 50vw;
+    max-height: 360px;
     transform: translate(-50%, 0);
     background-image: url("../../../assets/images/float-rock.png");
     background-size: 80% auto;
     background-repeat: no-repeat;
-    background-position: 50% 0px;
+    background-position: 50% 0;
+    @include phone {
+      max-height: 243px;
+    }
   }
   .rock__small-img {
     background-image: url("../../../assets/images/rocks-small.png");
@@ -286,7 +292,7 @@
     position: absolute;
     width: 75%;
     max-width: 656px;
-    min-width: 520px;
+    min-width: 260px;
     height: auto;
     bottom: -10px;
     left: 50%;
@@ -296,6 +302,9 @@
     cursor: pointer;
     image-rendering: smooth;
     z-index: 1;
+    @include phone {
+      bottom: 24px;
+    }
 
   }
   .svg .myfill {
