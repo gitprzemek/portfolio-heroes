@@ -44,6 +44,7 @@ export class NavigationPanelComponent implements OnInit {
     }
   }
   enterToWelcomeScreenFn(data: boolean): void {
+    this._mainService.showWall.next('run2');
     this._mainService.enterToApp.next(data);
   }
   changeLanguageFn(lang): void {

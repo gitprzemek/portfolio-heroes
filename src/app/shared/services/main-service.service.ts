@@ -14,6 +14,7 @@ export class MainServiceService {
   showMenuPanel: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   enterToApp: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  showWall: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   selectedLang: BehaviorSubject<string> = new BehaviorSubject<string>('en');
 
   constructor(public translate: TranslateService) {

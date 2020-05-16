@@ -1,78 +1,74 @@
-<section class="welcome" [ngClass]="enterToApp ? 'closeWelcome' : 'enterWelcome'">
-  <div class="welcome__star-bg"></div>
-  <div class="welcome__second-gradient"></div>
-  <div class="welcome__wrapper">
-    <div class="welcome__main-image">
-<!--      <div class="stairs-wrapper" [ngClass]="enterToApp ? 'closeStairs' : 'enterStairs'">-->
-<!--        <div class="stairs__ele stairs__ele&#45;&#45;first"></div>-->
-<!--        <div class="stairs__ele stairs__ele&#45;&#45;sec"></div>-->
-<!--        <div class="stairs__ele stairs__ele&#45;&#45;third"></div>-->
-<!--      </div>-->
-      <div class="rock-wrapper" [ngClass]="enterToApp ? 'closeStairs' : 'enterStairs'">
-        <div class="rock__main-img">
-          <div class="rock__small-img rock__small-img1"></div>
-          <div class="rock__small-img rock__small-img2"></div>
-          <div class="rock__small-img rock__small-img3"></div>
-          <div class="rock__small-img rock__small-img4"></div>
-          <div class="rock__small-img rock__small-img5"></div>
-          <div class="rock__small-img rock__small-img6"></div>
-          <div class="rock__small-img rock__small-img7"></div>
-          <div class="rock__small-img rock__small-img8"></div>
-          <div class="rock__small-img rock__small-img9"></div>
-          <div class="rock__small-img rock__small-img10"></div>
-          <div class="rock__small-img rock__small-img11"></div>
-          <div class="rock__small-img rock__small-img12"></div>
-          <div class="rock__small-img rock__small-img13"></div>
-          <div class="rock__small-img rock__small-img14"></div>
-          <div class="rock__small-img rock__small-img15"></div>
-          <div class="rock__small-img rock__small-img16"></div>
-          <div class="rock__small-img rock__small-img17"></div>
-          <div class="rock__small-img rock__small-img18"></div>
+<div class="welcome__wall-container" id="wall">
+  <div *ngIf="showWall" class="welcome__wall welcome__wall--left" [@slideWall]="showWall === ('run' || 'run2')"></div>
+  <div *ngIf="showWall" class="welcome__wall welcome__wall--right" [@slideWall2]="showWall === ('run' || 'run2')"></div>
+</div>
+<section class="welcome"  [ngClass]="enterToApp ? 'closeWelcome' : 'enterWelcome'">
+
+    <div class="welcome__star-bg"></div>
+    <div class="welcome__second-gradient"></div>
+    <div class="welcome__wrapper">
+      <div class="welcome__main-image">
+        <div class="svg-wrapper"  (click)="enterToAppFn(true); showWallFn()">
+          <svg id="svgImage" #svgImage xmlns="http://www.w3.org/2000/svg"
+               width="100%" height="100%" viewBox="0 0 2100 1500"
+               class="svg" x="0px" y="0px" [ngClass]="enterToApp ? 'enter' : ''">
+            <filter id="innershadow" x="-50%" y="-50%" width="200%" height="200%" >
+              <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"></feGaussianBlur>
+              <feOffset dy="8" dx="8"></feOffset>
+              <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
+              <feFlood flood-color="#000000" flood-opacity="0.95"></feFlood>
+              <feComposite in2="shadowDiff" operator="in"></feComposite>
+              <feComposite in2="SourceGraphic" operator="over" result="firstfilter"></feComposite>
+              <feGaussianBlur in="firstfilter" stdDeviation="7" result="blur2"></feGaussianBlur>
+              <feOffset dy="-8" dx="-8"></feOffset>
+              <feComposite in2="firstfilter" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
+              <feFlood flood-color="#000000" flood-opacity="0.95"></feFlood>
+              <feComposite in2="shadowDiff" operator="in"></feComposite>
+              <feComposite in2="firstfilter" operator="over"></feComposite>
+
+              <!--            <feFlood flood-color="red" result="outside-color"/>-->
+              <!--            <feMorphology in="SourceAlpha" operator="dilate" radius="2"/>-->
+              <!--            <feComposite in="outside-color" operator="in" result="outside-stroke"/>-->
+              <!--            &lt;!&ndash;inside-stroke&ndash;&gt;-->
+              <!--            <feFlood flood-color="blue" result="inside-color"/>-->
+              <!--            <feComposite in2="SourceAlpha" operator="in" result="inside-stroke"/>-->
+              <!--&lt;!&ndash;            fill-area&ndash;&gt;-->
+              <!--            <feMorphology in="SourceAlpha" operator="erode" radius="2"/>-->
+              <!--            <feComposite in="SourceGraphic" operator="in" result="fill-area"/>-->
+              <!--&lt;!&ndash;            merge graphics&ndash;&gt;-->
+              <!--            <feMerge>-->
+              <!--              <feMergeNode in="outside-stroke"/>-->
+              <!--              <feMergeNode in="inside-stroke"/>-->
+              <!--              <feMergeNode in="inside-stroke2"/>-->
+              <!--              <feMergeNode in="fill-area"/>-->
+              <!--            </feMerge>-->
+
+            </filter>
+            <filter id="turbulence" x="0" y="0" width="100%" height="100%" >
+              <feTurbulence id="sea-filter" numOctaves=1 seed="2" baseFrequency="0.02 0.01"></feTurbulence>
+              <feDisplacementMap scale="24" in="SourceGraphic"></feDisplacementMap>
+              <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="30s" keyTimes="0;0.3;0.7;1" values="0.009 0.009;0.005 0.0002;0.008 0.003;0.009 0.009" repeatCount="indefinite"/>
+            </filter>
+            <defs>
+              <pattern id="img1"   patternUnits="userSpaceOnUse" x="0" y="0" height="100%" width="100%" >
+                <image id="image1" xlink:href="../../assets/images/backgrounds/tower-map.jpg"  x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice"/>
+              </pattern>
+              <mask id="myMask" >
+                <path fill="#fff" stroke="red" stroke-width="1" color="black" stroke-linecap="square">
+                  <animate repeatCount="indefinite" attributeName="d" dur="5s"
+                           values="M1066,38c73.84,0,102.43,82.235,169,104,97.66,31.929,222.41,34.648,295,104,56.97,54.427,40.62,136.68,76,208,45.1,90.929,164,187.618,164,296,0,56.126-111.6,163.464-131,231-24.29,84.56-6.75,168.67-74,248-51.23,60.43-176.71,79.75-260,124-95.04,50.49-123.88-13-239-13-81.966,0-188.253,93.38-285,51-79.493-34.83-79.8-131.35-147-205-45.194-49.53-157.972-82.42-190-153-38.832-85.571,10-182.91,10-283,0-77.034-124.55-200.952-92-285,28.882-74.579,114.962-55.044,179-124,68.171-73.406,137.893-208.694,238-247C852.748,65.781,978.112,38,1066,38Z;
+                            M1050,116c73.84,0,156.43-61.765,223-40,97.66,31.929,146.41,116.648,219,186,56.97,54.427,166.62,56.68,202,128,45.1,90.929,2,209.618,2,318,0,56.126,64.4,167.464,45,235-24.29,84.56-132.75,120.67-200,200-51.23,60.43-46.71,213.75-130,258-95.04,50.49-245.88,17-361,17-81.966,0-182.253,31.38-279-11-79.493-34.83-95.8-119.35-163-193-45.194-49.53-171.972-98.42-204-169-38.832-85.571,4-194.91,4-295,0-77.034-68.55-180.952-36-265,28.882-74.579,154.962-111.044,219-180,68.171-73.406,115.763-152.421,215.87-190.726C880.618,86.054,962.112,116,1050,116Z;
+                            M1050,42c73.84,0,132.43,80.235,199,102,97.66,31.929,240.41,18.648,313,88,56.97,54.427,10.62,178.68,46,250,45.1,90.929,160,159.618,160,268,0,56.126-93.6,107.464-113,175-24.29,84.56,21.25,220.67-46,300-51.23,60.43-188.71,37.75-272,82-95.04,50.49-171.88,143-287,143-81.966,0-148.253-76.62-245-119-79.493-34.83-235.8-27.35-303-101-45.194-49.53.028-158.42-32-229-38.832-85.571-126-150.91-126-251,0-77.034,89.45-146.952,122-231,28.882-74.579-5.038-213.044,59-282,68.171-73.406,207.893-46.694,308-85C906.748,123.781,962.112,42,1050,42Z;
+                            M1104,80c73.84,0,132.43-1.765,199,20,97.66,31.929,82.41,80.648,155,150,56.97,54.427,236.62,104.68,272,176,45.1,90.929-50,159.618-50,268,0,56.126,56.4,191.464,37,259-24.29,84.56-86.75,66.67-154,146-51.23,60.43-100.71,241.75-184,286-95.04,50.49-169.88,3-285,3-81.97,0-256.253,49.38-353,7-79.493-34.83-95.8-159.35-163-233-45.194-49.53-61.972-128.42-94-199-38.832-85.571-152-142.91-152-243,0-77.034,99.45-170.952,132-255,28.882-74.579.962-149.044,65-218,68.171-73.406,189.893-58.694,290-97C892.748,121.781,1016.11,80,1104,80Z;
+                            M1050,128c73.84,0,172.43-93.765,239-72,97.66,31.929,92.41,142.648,165,212,56.97,54.427,208.62,62.68,244,134,45.1,90.929-36,195.618-36,304,0,56.126,118.4,185.464,99,253-24.29,84.56-174.75,110.67-242,190-51.23,60.43-12.71,187.75-96,232-95.04,50.49-257.88-1-373-1-81.966,0-202.253,81.38-299,39-79.493-34.83-29.8-147.35-97-221-45.194-49.53-253.972-116.42-286-187-38.832-85.571,56-192.91,56-293,0-77.034-58.55-192.952-26-277,28.882-74.579,198.962-83.044,263-152,68.171-73.406,33.893-180.694,134-219C868.748,41.781,962.112,128,1050,128Z;
+                            M1066,38c73.84,0,102.43,82.235,169,104,97.66,31.929,222.41,34.648,295,104,56.97,54.427,40.62,136.68,76,208,45.1,90.929,164,187.618,164,296,0,56.126-111.6,163.464-131,231-24.29,84.56-6.75,168.67-74,248-51.23,60.43-176.71,79.75-260,124-95.04,50.49-123.88-13-239-13-81.966,0-188.253,93.38-285,51-79.493-34.83-79.8-131.35-147-205-45.194-49.53-157.972-82.42-190-153-38.832-85.571,10-182.91,10-283,0-77.034-124.55-200.952-92-285,28.882-74.579,114.962-55.044,179-124,68.171-73.406,137.893-208.694,238-247C852.748,65.781,978.112,38,1066,38Z"/>
+                </path>
+              </mask>
+            </defs>
+            <rect class="myfill" fill="url(#img1)" filter="url(#innershadow) url(#turbulence)" mask="url(#myMask)" width="2100" height="1500" ></rect>
+          </svg>
         </div>
       </div>
-      <div class="svg-wrapper"  (click)="enterToAppFn(true)">
-        <svg [ngClass]="enterToApp ? 'enter' : ''"
-             xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 2100 1500" class="svg" x="0px" y="0px" >
-          <filter id="innershadow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"></feGaussianBlur>
-            <feOffset dy="8" dx="8"></feOffset>
-            <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
-            <feFlood flood-color="#000000" flood-opacity="0.95"></feFlood>
-            <feComposite in2="shadowDiff" operator="in"></feComposite>
-            <feComposite in2="SourceGraphic" operator="over" result="firstfilter"></feComposite>
-            <feGaussianBlur in="firstfilter" stdDeviation="7" result="blur2"></feGaussianBlur>
-            <feOffset dy="-8" dx="-8"></feOffset>
-            <feComposite in2="firstfilter" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
-            <feFlood flood-color="#000000" flood-opacity="0.95"></feFlood>
-            <feComposite in2="shadowDiff" operator="in"></feComposite>
-            <feComposite in2="firstfilter" operator="over"></feComposite>
-          </filter>
-          <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-            <feTurbulence id="sea-filter" numOctaves=1 seed="2" baseFrequency="0.02 0.01"></feTurbulence>
-            <feDisplacementMap scale="24" in="SourceGraphic"></feDisplacementMap>
-            <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="30s" keyTimes="0;0.3;0.7;1" values="0.009 0.009;0.005 0.0002;0.008 0.003;0.009 0.009" repeatCount="indefinite"/>
-          </filter>
-          <defs>
-            <pattern id="img1"   patternUnits="userSpaceOnUse" x="0" y="0" height="100%" width="100%">
-              <image xlink:href="../../assets/images/backgrounds/tower-map.jpg"  x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice"/>
-            </pattern>
-            <mask id="myMask">
-              <path fill="#fff">
-                <animate repeatCount="indefinite" attributeName="d" dur="5s"
-                         values="
-M908,56c115.81-8.272,160.31,85.812,272,98,130.69,14.262,221.28-99.468,344-56,37.96,13.447,95.17,47.664,122,110,46.85,108.847-54.03,196.274-18,308,32.11,99.59,125.49,98.839,166,200,47.36,118.271-3.92,283.7-104,368-61.61,51.9-108.96,44.35-174,92-70.48,51.64-89.42,117.4-138,166-169.85,169.91-529.886,188.79-664,40-71.129-78.91-29.342-153.77-98-258-41.364-62.79-134.512-104.84-146-182C453.186,829.069,593.181,767.077,604,636c8.363-101.314-62.676-146.608-44-254,5.383-30.956,51.11-114.1,126-188C775.953,105.239,871.964,58.574,908,56Z;
-M938,134c51.064,12.144,195.96,5.487,338-26,152.76-33.863,249.22-84.459,342-32,64.62,36.539,102.7,107.718,114,168,23.94,127.694-73.05,186.4-56,310,14.01,101.6,85.99,125.446,116,234,17.71,64.079,32.14,183.005-30,282-48.87,77.86-116.35,93.91-210,148-91.03,52.58-115.32,112.39-208,162-259.05,138.66-628.5,96.46-706-62-55.852-114.2,73.671-227.17,8-354-45.151-87.2-174.216-104.666-180-176-7.241-89.3,179.238-139.955,182-246,2.417-92.8-131.315-128.921-136-230-4.355-93.951,99.332-195.122,204-218C798.3,76.012,850.779,113.258,938,134Z;
-
-M994,26c135.66,28.239,188.18,93.616,326,108,72.21,7.537,122.72.295,192,22,56.69,17.761,180.51,67.24,194,152,9.08,57.028-39,80.745-30,138,12.58,80,115.21,90.8,128,166,12.66,74.422-84.45,125.389-104,214-23.28,105.489,47.38,150.02,28,248-14.05,71.04-109.72,177.79-314,264-277.9,117.27-583.095,173.39-776,22-51.559-40.46-131.488-122.27-140-226-6.279-76.52,34.868-123.93,44-180,24.294-149.166-86.632-232.761-44-368,31.849-101.031,105.821-96.291,142-198,43.993-123.678-49.766-239.278,8-320C704.8-11.376,863.8-1.1,994,26Z;
-M908,56c115.81-8.272,160.31,85.812,272,98,130.69,14.262,221.28-99.468,344-56,37.96,13.447,95.17,47.664,122,110,46.85,108.847-54.03,196.274-18,308,32.11,99.59,125.49,98.839,166,200,47.36,118.271-3.92,283.7-104,368-61.61,51.9-108.96,44.35-174,92-70.48,51.64-89.42,117.4-138,166-169.85,169.91-529.886,188.79-664,40-71.129-78.91-29.342-153.77-98-258-41.364-62.79-134.512-104.84-146-182C453.186,829.069,593.181,767.077,604,636c8.363-101.314-62.676-146.608-44-254,5.383-30.956,51.11-114.1,126-188C775.953,105.239,871.964,58.574,908,56Z"/>
-              </path>
-            </mask>
-          </defs>
-          <rect class="myfill" fill="url(#img1)" filter="url(#innershadow) url(#turbulence)" mask="url(#myMask)" width="2100" height="1500" ></rect>
-        </svg>
-      </div>
     </div>
-
-  </div>
 
 </section>
