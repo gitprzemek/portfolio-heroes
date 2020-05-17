@@ -75,7 +75,7 @@
       </app-action-field>
       <app-action-field class="navigation-panel__right-button"
                         [type]="'button'"
-                        [content]="'MAIN_SITE.LANGUAGE' | translate"
+                        [content]="('MAIN_SITE.LANGUAGE') ? ('MAIN_SITE.LANGUAGE' | translate) : 'Language : ENG'"
                         *ngIf="selectedLanguage === 'pl'"
                         (click)="changeLanguageFn('en')">
       </app-action-field>

@@ -27,31 +27,54 @@
   text-shadow: 2px 2px #000000;
   height: 100vh;
   width: auto;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: calc(100% - 34px);
-    left: 0;
-    top: 17px;
-    background-image: url("src/assets/images/borders/linetransp.png");
-    background-repeat: repeat-y;
-    background-position: top left;
-    background-size: 100% auto;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: calc(100% - 34px);
-    right: 0;
-    top: 17px;
-    background-image: url("src/assets/images/borders/linetransp.png");
-    background-repeat: repeat-y;
-    background-position: top left;
-    background-size: 100% auto;
-    transform: scaleX(-1);
-  }
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  width: 20px;
+  //  height: calc(100% - 34px);
+  //  left: 0;
+  //  top: 17px;
+  //  background-image: url("src/assets/images/borders/linetransp.png");
+  //  background-repeat: repeat-y;
+  //  background-position: top left;
+  //  background-size: 100% auto;
+  //}
+  //&::after {
+  //  content: '';
+  //  position: absolute;
+  //  width: 20px;
+  //  height: calc(100% - 34px);
+  //  right: 0;
+  //  top: 17px;
+  //  background-image: url("src/assets/images/borders/linetransp.png");
+  //  background-repeat: repeat-y;
+  //  background-position: top left;
+  //  background-size: 100% auto;
+  //  transform: scaleX(-1);
+  //}
+}
+.left-line {
+  position: absolute;
+  width: 20px;
+  height: calc(100% - 34px);
+  left: 0;
+  top: 17px;
+  background-image: url("src/assets/images/borders/linetransp.png");
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 100% auto;
+}
+.right-line {
+  position: absolute;
+  width: 20px;
+  height: calc(100% - 34px);
+  right: 0;
+  top: 17px;
+  background-image: url("src/assets/images/borders/linetransp.png");
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 100% auto;
+  transform: scaleX(-1);
 }
 .bottom-line {
   position: absolute;
