@@ -1,22 +1,20 @@
-//// phones
-//$phones: '(min-width: 0px) and (max-width: 575px)';
-//
-//// Small tablets and large smartphones (landscape view)
-//$small-tablet: '(min-width: 576px) and (max-width: 767px)';
-//
-//// Small tablets (portrait view)
-//$tablets: '(min-width: 576px) and (max-width: 767px)';
-//
-//// Tablets and small desktops
-//$small-laptops: '(min-width: 992px) and (max-width: 1199px)';
-//
-//// Laptop
-//$laptops: '(min-width: 1200px) and (max-width: 1365px)';
-//
-//// Normal screen and large laptops
-//$small-desktop: ((min-width: 1366px) and (max-width: 1535px));
-//
-//
-//// Large screens
-//$large-desktop: '(min-width: 1536px)';
+$black: #000000;
+$white: #ffffff;
+
+$text-light: #fff4e3;
+$text-red: #ff2935;
+$text-shadow-light: #ffffffad;
+
+$border-color: #deaf63;
+$border-color-bronze: #766953;
+$border-color-dark-bronze: rgb(63, 41, 21);
+
+$background-orange: #a58x942;
+
+$icon-color: #ffe794l;
+
+$line-color-dark: #2a251e;
+$line-color-light: #736e66;
+$line-color-lightest: rgba(41, 34, 24, 0.23);
+
 

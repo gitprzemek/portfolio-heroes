@@ -3,8 +3,8 @@
   position: relative;
   width: 100%;
   padding: 11px;
-  color: #fff4e3;
-  text-shadow: 2px 2px #000000;
+  color: $text-light;
+  text-shadow: 2px 2px $black;
   .panel-border-line {
     position: absolute;
     width: 100%;
@@ -298,6 +298,15 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     z-index: 2;
+    ::ng-deep .action__sec-border--button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .action__button-img {
+        width: 64%;
+        height: auto;
+      }
+    }
   }
   .left-container__top-left {
     width: 27%;
@@ -377,7 +386,7 @@
     width: 100%;
     height: 110px;
     ::ng-deep *{
-      color: #ffe794;
+      color: $icon-color;
     }
     @include laptops {
       font-size: 12px;

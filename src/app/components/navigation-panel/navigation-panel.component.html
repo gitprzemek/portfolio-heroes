@@ -21,15 +21,15 @@
         <app-action-field class="left-container__bottom-field"
                           [type]="'button-link'"
                           [content]="'../../../assets/images/icons/in3.png'"
-                          [link]="'https://github.com/gitprzemek'"></app-action-field>
+                          [link]="'https://www.linkedin.com/in/przemyslaw-szczepanski-in/'"></app-action-field>
         <app-action-field class="left-container__bottom-field"
-                          [type]="'button-link'"
+                          [type]="'button-img'"
                           [content]="'../../../assets/images/icons/mail-icon.png'"
-                          [link]="'https://github.com/gitprzemek'"></app-action-field>
+                          (click)="openContact()"></app-action-field>
         <app-action-field class="left-container__bottom-field"
                           [type]="'button-link'"
                           [content]="'../../../assets/images/icons/facebook-icon.png'"
-                          [link]="'https://github.com/gitprzemek'"></app-action-field>
+                          [link]="'https://www.facebook.com/przemek.szczepanski.50'"></app-action-field>
 
       </div>
     </div>
@@ -75,7 +75,7 @@
       </app-action-field>
       <app-action-field class="navigation-panel__right-button"
                         [type]="'button'"
-                        [content]="('MAIN_SITE.LANGUAGE') ? ('MAIN_SITE.LANGUAGE' | translate) : 'Language : ENG'"
+                        [content]="('MAIN_SITE.LANGUAGE' | translate) ? ('MAIN_SITE.LANGUAGE' | translate) : 'Language : ENG'"
                         *ngIf="selectedLanguage === 'pl'"
                         (click)="changeLanguageFn('en')">
       </app-action-field>

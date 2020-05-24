@@ -3,12 +3,12 @@
 .about-projects {
   max-width: 1260px;
   max-height: 885px;
-  color: #fff4e3;
-  text-shadow: 2px 2px #000000;
+  color: $text-light;
+  text-shadow: 2px 2px $black;
 
   @include small-desktop {
-    max-width: 1165px;;
-    max-height: 734px;
+    max-width: 1165px;
+    //max-height: 734px;
   }
 }
 
@@ -124,7 +124,7 @@
   width: 100%;
   @include phone {
     ::ng-deep .action__sec-border {
-      border-right: 3px solid rgb(63, 41, 21);
+      border-right: 3px solid $border-color-dark-bronze;
     }
   }
 }
@@ -217,7 +217,7 @@
   height: 10%;
 
   h2 {
-    color: #ffe794;
+    color: $icon-color;
     font-size: 32px;
     letter-spacing: 2px;
   }

@@ -30,7 +30,7 @@
 }
  // MEDIA FOR HEIGHT
 @mixin small-phone {
-  @media (max-height: 607px) {
+  @media (max-height: 607px) and (max-width: 599px) {
     @content;
   }
 }

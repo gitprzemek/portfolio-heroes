@@ -80,15 +80,6 @@
   opacity: 1;
   overflow: hidden;
 
-
-  //.slideIn {
-  //  &.welcome__wall--left {
-  //    transform: translateX(0);
-  //  }
-  //  &.welcome__wall--right {
-  //    transform: translateX(0);
-  //  }
-  //}
   .welcome__main-container {
     width: 100%;
     height: 100%;
@@ -116,19 +107,7 @@
       transform: translate(0) rotate(15deg);
     }
   }
-  //.welcome__second-gradient {
-  //  width: 100%;
-  //  height: 100%;
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  color: rgba(85, 31, 86, 0.98);
-  //  background: rgb(16,58,110);
-  //  background: radial-gradient(circle at 50% -30%, #000000 0%, rgba(0, 0, 0, 0.23) 10%, rgba(15, 0, 32, 0.32) 71%, rgba(0, 55, 164, 0.39) 100%);
-  //  //background: radial-gradient(circle at 50% -30%, #103a6e 0%, rgba(16, 58, 110, 0.23) 10%, rgba(7, 11, 17, 0.44) 71%, rgba(7, 11, 17, 0.62) 100%);
-  //  //background: radial-gradient(32% 70% ellipse at 50% -12%, rgba(47, 163, 233, 0.2) 0%, rgba(47, 163, 233, 0.1) 25%, rgba(7, 11, 17, 0) 56%);
-  //  //background: radial-gradient(32% 70% ellipse at 50% -12%, rgba(85, 31, 86, 0.3) 0%, rgba(85, 31, 86, 0.1) 25%, rgba(7, 11, 17, 0) 56%);
-  //}
+
   .welcome__second-gradient {
     width: 100%;
     height: 100%;
@@ -152,215 +131,6 @@
     //min-width: 550px;
     margin: 0 auto;
   }
-
-  .stairs-wrapper {
-    position: relative;
-    width: 100%;
-    height: 40%;
-    top: 60%;
-    transform: translateY(-40px);
-    opacity: 1;
-    //transition: opacity 0.1s linear;
-    z-index: 2;
-  }
-  .rock-wrapper {
-    position: relative;
-    width: 100%;
-    height: 40%;
-    min-height: 380px;
-    top: 60%;
-    transform: translateY(-48px);
-    opacity: 1;
-    //transition: opacity 0.1s linear;
-    z-index: 0;
-  }
-  .rock__main-img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    height: 50vw;
-    max-height: 360px;
-    transform: translate(-50%, 0);
-    background-image: url("../../../assets/images/float-rock.png");
-    background-size: 80% auto;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    @include phone {
-      max-height: 243px;
-    }
-  }
-  //.rock__small-img {
-  //  background-image: url("../../../assets/images/rocks-small.png");
-  //  position: absolute;
-  //  height: 15%;
-  //  width: 10%;
-  //  background-size: 420% auto;
-  //  background-repeat: no-repeat;
-  //  background-position: 0 0;
-  //  animation: rock1 7s linear 0s infinite;
-  //}
-  //.rock__small-img1 {
-  //  top: 56.1%;
-  //  left: 19.1%;
-  //  background-position: 0 0;
-  //  animation: rock1 14s linear 0s infinite;
-  //}
-  //.rock__small-img2 {
-  //  top: 75%;
-  //  left: 17%;
-  //  background-position: 35% 54%;
-  //}
-  //.rock__small-img3 {
-  //  top: 63%;
-  //  left: 22%;
-  //  background-position: 58% 0;
-  //  animation: rock1 5.4s linear 0s infinite;
-  //}
-  //.rock__small-img4 {
-  //  top: 61%;
-  //  left: 31%;
-  //  background-position: 0 25%;
-  //  animation: rock1 8.8s linear 0s infinite;
-  //}
-  //.rock__small-img5 {
-  //  top: 79%;
-  //  left: 29%;
-  //  background-position: 64% 79%;
-  //}
-  //.rock__small-img6 {
-  //  top: 81%;
-  //  left: 39%;
-  //  background-position: 98% 52%;
-  //  animation: rock1 8.1s linear 0s infinite;
-  //}
-  //.rock__small-img7 {
-  //  top: 74%;
-  //  left: 44.5%;
-  //  background-position: 0 100%;
-  //  animation: rock3 7.2s linear 0s infinite;
-  //}
-  //.rock__small-img8 {
-  //  top: 60%;
-  //  left: 50%;
-  //  background-position: 66% 99%;
-  //  animation: rock4 12.5s linear 0s infinite;
-  //}
-  //.rock__small-img9 {
-  //  top: 68%;
-  //  left: 53%;
-  //  background-position: 35% 0;
-  //}
-  //.rock__small-img10 {
-  //  top: 81%;
-  //  left: 52%;
-  //  background-position: 97% 22%;
-  //  animation: rock2 4.2s linear 0s infinite;
-  //}
-  //.rock__small-img11 {
-  //  top: 83%;
-  //  left: 60%;
-  //  background-position: 99% 0;
-  //  animation: rock3 7s linear 0s infinite;
-  //}
-  //.rock__small-img12 {
-  //  top: 63%;
-  //  left: 59%;
-  //  background-position: 35% 25%;
-  //  animation: rock1 6.6s linear 0s infinite;
-  //}
-  //.rock__small-img13 {
-  //  top: 52%;
-  //  left: 60%;
-  //  background-position: 64% 27%;
-  //  animation: rock4 19s linear 0s infinite;
-  //}
-  //.rock__small-img14 {
-  //  top: 53%;
-  //  left: 65%;
-  //  background-position: 0 50%;
-  //  animation: rock1 11s linear 0s infinite;
-  //}
-  //.rock__small-img15 {
-  //  top: 55%;
-  //  left: 71%;
-  //  background-position: 0 76%;
-  //  animation: rock2 7.5s linear 0s infinite;
-  //}
-  //.rock__small-img16 {
-  //  top: 55%;
-  //  left: 77%;
-  //  background-position: 68% 51%;
-  //}
-  //.rock__small-img17 {
-  //  top: 65%;
-  //  left: 75%;
-  //  background-position: 33% 101%;
-  //  animation: rock4 8.7s linear 0s infinite;
-  //}
-  //.rock__small-img18 {
-  //  top: 47%;
-  //  left: 79%;
-  //  background-position: 36% 75%;
-  //  animation: rock2 5.5s linear 0s infinite;
-  //}
-  @keyframes rock1 {
-    0% {transform: translateY(-9px)}
-    50% {transform: translateY(9px)}
-    100% {transform: translateY(-9px)}
-  }
-  @keyframes rock2 {
-    0% {transform: translateY(7px)}
-    50% {transform: translateY(-4px)}
-    100% {transform: translateY(7px)}
-  }
-  @keyframes rock3 {
-    0% {transform: translateY(2px)}
-    50% {transform: translateY(-2px)}
-    100% {transform: translateY(2px)}
-  }
-  @keyframes rock4 {
-    0% {transform: translateY(-10px)}
-    50% {transform: translateY(9px)}
-    100% {transform: translateY(-10px)}
-  }
-  .stairs__ele {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 400px;
-    height: 80px;
-    background-image: url("../../../assets/images/step1.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translate(-50%, 0);
-  }
-  .stairs__ele--first {
-    top: 0;
-  }
-  .stairs__ele--sec {
-    top: 65px;
-    width: 460px;
-    animation: move1 7s linear infinite;
-    transform: translate(-50%, 10px);
-  }
-  .stairs__ele--third {
-    top: 140px;
-    width: 520px;
-    animation: move2 9s linear infinite;
-    transform: translate(-50%, 10px);
-  }
-  @keyframes move1 {
-    0%   {transform: translate(-50%, 6px);}
-    50%  {transform: translate(-50%, -10px);}
-    100%  {transform: translate(-50%, 6px);}
-  }
-  @keyframes move2 {
-    0%   {transform: translate(-50%, -8px);}
-    50%  {transform: translate(-50%, 8px);}
-    100%  {transform: translate(-50%, -8px);}
-  }
   .svg-wrapper {
     width: 100%;
     height: 60%;
@@ -368,7 +138,7 @@
     transform: translateY(-50%);
     position: absolute;
     margin: 0 auto;
-    color: #000000;
+    color: $black;
     //&::after {
     //  content: "";
     //  position: absolute;

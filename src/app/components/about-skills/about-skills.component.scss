@@ -2,7 +2,7 @@
 
 .about-skills {
   position: relative;
-  background-color: #fff4e3;
+  background-color: $text-light;
   z-index: 1;
   width: auto;
   max-width: 1051px;
@@ -54,7 +54,7 @@
     height: 3px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(180deg, #a58942 40%, #a58942 40%, #000000 100%);
+    background: linear-gradient(180deg, $background-orange 40%, $background-orange 40%, $black 100%);
     //background-image: url("../../../assets/images/small-border-2.png");
     //background-repeat: repeat-x;
     //background-position: top left;

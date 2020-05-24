@@ -34,7 +34,7 @@
   height: 10%;
 
   h2 {
-    color: #ffe794;
+    color: $icon-color;
     font-size: 32px;
     letter-spacing: 2px;
   }
@@ -58,7 +58,7 @@
   text-align: center;
   line-height: 1.6em;
   padding: 10px;
-  border: 2px solid #766953;
+  border: 2px solid $border-color-bronze;
   -webkit-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   -moz-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
@@ -140,7 +140,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #766953;
+  border: 2px solid $border-color-bronze;
   -webkit-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   -moz-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
