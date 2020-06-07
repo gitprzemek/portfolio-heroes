@@ -431,5 +431,25 @@
       width: 43%;
     }
   }
+  .navigation-panel__right-button--hide-menu {
+    @include large-desktop {
+      pointer-events: none;
+      ::ng-deep .action__content--button {
+        color: rgba(119, 119, 119, 0.83);
+      }
+    }
+    @include small-desktop {
+      pointer-events: none;
+      ::ng-deep .action__content--button {
+        color: rgba(119, 119, 119, 0.83);
+      }
+    }
+    @include tablets {
+      pointer-events: unset;
+      ::ng-deep .action__content--button {
+        color: $text-light;
+      }
+    }
+  }
 
 }

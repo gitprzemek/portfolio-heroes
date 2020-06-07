@@ -154,20 +154,7 @@
     //  z-index: 0;
     //}
   }
-  @keyframes rot {
-    from {transform: translate(-50%, -50%) rotate(0);}
-    to {transform: translate(-50%, -50%) rotate(360deg);}
-  }
 
-  #image1 {
-    animation: rot2 45s linear infinite;
-    transform: rotate(0);
-    transform-origin: 50%;
-  }
-  @keyframes rot2 {
-    from {transform:  rotate(0);}
-    to {transform: rotate(-360deg);}
-  }
   .svg {
     position: absolute;
     width: 750px;
@@ -178,21 +165,45 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(0);
     filter:  url("#innershadow");
-    transition: all ease-in 0.8s;
+    transition: all linear;
     cursor: pointer;
     image-rendering: smooth;
     z-index: 1;
     overflow: hidden;
-    animation: rot 45s linear infinite;
+    animation-name: rot;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    //animation: rot 45s linear infinite;
     @include phone {
       bottom: 24px;
       color: #000;
     }
 
   }
+  @keyframes rot {
+    from {transform: translate(-50%, -50%) rotate(0);}
+    to {transform: translate(-50%, -50%) rotate(360deg);}
+  }
+
+  #image1 {
+    animation: rot2 45s linear infinite;
+    transform: rotate(0);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    image-rendering: smooth;
+    transition: all 1s linear;
+  }
+  @keyframes rot2 {
+    from {transform: rotate(0);}
+    to {transform: rotate(-360deg);}
+  }
+
   .svg .myfill {
     filter: url("#turbulence");
   }
+
   .enter {
     transform: translate(-50%, 0) scale(10);
     //transform: translate(-50%, 0) matrix(2, 0, 0, 2);
@@ -219,3 +230,12 @@
   opacity: 1;
 }
 
+@-moz-document url-prefix() {
+  @keyframes rot {
+    from {transform: translate(-50%, -50%) rotate(0);}
+    to {transform: translate(-50%, -50%) rotate(0);}
+  }
+  #image1 {
+    animation: unset !important;
+  }
+}

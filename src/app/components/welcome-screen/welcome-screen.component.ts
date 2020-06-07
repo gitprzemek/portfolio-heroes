@@ -11,6 +11,7 @@ import {slideRightAnimation} from "../../shared/animations/slideRightWall";
 export class WelcomeScreenComponent implements OnInit {
   enterToApp = false;
   showWall = null;
+  isIEOrEdge = false;
   @ViewChild('svgImage', {static: false}) childId:ElementRef;
 
   constructor(private _mainServiceService: MainServiceService) { }
@@ -23,7 +24,9 @@ export class WelcomeScreenComponent implements OnInit {
     this._mainServiceService.showWall.subscribe( res => {
       this.showWall = res;
       console.log(res);
-    })
+    });
+    this.isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
+    console.log(this.isIEOrEdge);
   }
   showWallFn(): void {
     this._mainServiceService.showWall.next('run');
