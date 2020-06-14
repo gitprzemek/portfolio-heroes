@@ -17,16 +17,13 @@ export class WelcomeScreenComponent implements OnInit {
   constructor(private _mainServiceService: MainServiceService) { }
 
   ngOnInit() {
-    console.log(this.showWall);
     this._mainServiceService.enterToApp.subscribe( res => {
       this.enterToApp = res;
     });
     this._mainServiceService.showWall.subscribe( res => {
       this.showWall = res;
-      console.log(res);
     });
     this.isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
-    console.log(this.isIEOrEdge);
   }
   showWallFn(): void {
     this._mainServiceService.showWall.next('run');

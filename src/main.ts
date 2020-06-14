@@ -7,6 +7,11 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
+let loadingElement = document.querySelector(".loader-wrapper");
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+setTimeout(() => {
+  platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .then(() => setTimeout(() => loadingElement.classList.add("loaded"), 1000))
+    .then(() => setTimeout(() => loadingElement.remove(), 2000));
+}, 0);
