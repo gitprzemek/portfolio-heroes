@@ -18,7 +18,7 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export function HttpLoaderFactory(http : HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -46,7 +46,6 @@ export function HttpLoaderFactory(http : HttpClient) {
         deps: [HttpClient]
       }
     })
-
   ],
   providers: [],
   bootstrap: [AppComponent]
