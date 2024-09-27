@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"background-blur\"></div>\r\n<section class=\"about-me section\">\r\n  <div class=\"top-line\"></div>\r\n  <div class=\"bottom-line\"></div>\r\n  <div class=\"left-line\"></div>\r\n  <div class=\"right-line\"></div>\r\n  <div class=\"corner-line corner-line--lt\"></div>\r\n  <div class=\"corner-line corner-line--lb\"></div>\r\n  <div class=\"corner-line corner-line--rt\"></div>\r\n  <div class=\"corner-line corner-line--rb\"></div>\r\n  <div class=\"about-me__content\">\r\n    <div class=\"about-me__box about-me__box--1\">\r\n      <h2>{{'MAIN_SITE.ABOUT_ME' | translate}}</h2>\r\n    </div>\r\n<!--    <div class=\"about-me__box about-me__box&#45;&#45;2\">-->\r\n<!--      <div class=\"about-me__gif-cont\"></div>-->\r\n<!--    </div>-->\r\n\r\n    <div class=\"about-me__box about-me__box--3\">\r\n      <div class=\"about-me__photo-cont\">\r\n        <div class=\"about-me__first-border\">\r\n          <div class=\"about-me__sec-border\">\r\n            <div class=\"about-me__photo-content\">\r\n              <div class=\"about-me__photo-header\">\r\n                <img class=\"about-me__photo-img-badge\" src=\"assets/images/badgeexp.png\" alt=\"exp\">\r\n                <app-action-field class=\"about-me__photo-img\" [type]=\"'image'\" [content]=\"'assets/images/ja2.jpg'\"></app-action-field>\r\n                <img class=\"about-me__photo-img-badge\" src=\"assets/images/badgeexp.png\" alt=\"exp\">\r\n              </div>\r\n\r\n              <div class=\"about-me__photo-text\">\r\n                Front-end developer / Angular developer\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n    <div class=\"about-me__box about-me__box--4\">\r\n      <div class=\"about-me__desc\">\r\n        {{'ABOUT_ME.DESCRIPTION' | translate}}\r\n      </div>\r\n    </div>\r\n    <div class=\"about-me__box about-me__box--5\">\r\n      <div class=\"about-me__actions-cont\">\r\n        <app-action-field class=\"about-me__button\"\r\n                          [type]=\"'button-img'\"\r\n                          [content]=\"'../../../assets/images/icons/exit.png'\"\r\n                          [link]=\"'https://github.com/gitprzemek'\"\r\n                          (click)=\"closeWindow()\"></app-action-field>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</section>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"background-blur\"></div>\r\n<section class=\"about-me section\">\r\n  <div class=\"top-line\"></div>\r\n  <div class=\"bottom-line\"></div>\r\n  <div class=\"left-line\"></div>\r\n  <div class=\"right-line\"></div>\r\n  <div class=\"corner-line corner-line--lt\"></div>\r\n  <div class=\"corner-line corner-line--lb\"></div>\r\n  <div class=\"corner-line corner-line--rt\"></div>\r\n  <div class=\"corner-line corner-line--rb\"></div>\r\n  <div class=\"about-me__content\">\r\n    <div class=\"about-me__box about-me__box--1\">\r\n      <h2>{{'MAIN_SITE.ABOUT_ME' | translate}}</h2>\r\n    </div>\r\n<!--    <div class=\"about-me__box about-me__box&#45;&#45;2\">-->\r\n<!--      <div class=\"about-me__gif-cont\"></div>-->\r\n<!--    </div>-->\r\n\r\n    <div class=\"about-me__box about-me__box--3\">\r\n      <div class=\"about-me__photo-cont\">\r\n        <div class=\"about-me__first-border\">\r\n          <div class=\"about-me__sec-border\">\r\n            <div class=\"about-me__photo-content\">\r\n              <div class=\"about-me__photo-header\">\r\n                <img class=\"about-me__photo-img-badge\" src=\"assets/images/badgeexp.png\" alt=\"exp\">\r\n                <app-action-field class=\"about-me__photo-img\" [type]=\"'image'\" [content]=\"'assets/images/ja2.jpg'\"></app-action-field>\r\n                <img class=\"about-me__photo-img-badge\" src=\"assets/images/badgeexp.png\" alt=\"exp\">\r\n              </div>\r\n\r\n              <div class=\"about-me__photo-text\">\r\n                Front-end developer / Angular developer\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n    <div class=\"about-me__box about-me__box--4\">\r\n      <div class=\"about-me__desc\">\r\n        {{'ABOUT_ME.DESCRIPTION' | translate}}\r\n      </div>\r\n    </div>\r\n    <div class=\"about-me__box about-me__box--5\">\r\n      <div class=\"about-me__actions-cont\">\r\n        <app-action-field class=\"about-me__button\"\r\n                          [type]=\"'button-img'\"\r\n                          [content]=\"'assets/images/icons/exit.png'\"\r\n                          [link]=\"'https://github.com/gitprzemek'\"\r\n                          (click)=\"closeWindow()\"></app-action-field>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</section>\r\n");
 
 /***/ }),
 
@@ -1222,7 +1222,7 @@ const AboutProjects = [
         title: { en: 'Portfolio', pl: 'Portfolio' },
         description: { en: 'My portfolio page inspired by Heroes of Might & Magic 3 game.', pl: 'Moja strona portfolio inspirowana grą Heroes of Might & Magic 3.' },
         links: { demo: 'https://gitprzemek.github.io/wow-horde-clock/', repo: 'https://github.com/gitprzemek/wow-horde-clock' },
-        photo: '../../../assets/images/projects-images/angel.gif',
+        photo: 'assets/images/projects-images/angel.gif',
         tech: ['Angular 2+', 'CSS3 | SASS', 'JS | TypeScript', 'Photoshop', 'BEM', 'Flex | RWD']
     },
     {
@@ -1230,7 +1230,7 @@ const AboutProjects = [
         description: { en: 'Commercial project commissioned by a local restaurant.',
             pl: 'Komercyjny projekt wykonany na zlecenie miejscowej restauracji.' },
         links: { demo: 'http://uduzegokowboja.pl/', repo: 'https://github.com/gitprzemek/u_duzego_kowboja' },
-        photo: '../../../assets/images/projects-images/cowboy.webp',
+        photo: 'assets/images/projects-images/cowboy.webp',
         tech: ['HTML5', 'CSS3 | SASS', 'JavaScript | JQuery', 'Photoshop', 'BEM', 'Flex | RWD']
     },
     {
@@ -1238,7 +1238,7 @@ const AboutProjects = [
         description: { en: 'My old portfolio page project',
             pl: 'Moje stare portfolio i projekt' },
         links: { demo: 'https://gitprzemek.github.io/portfolio/', repo: 'https://github.com/gitprzemek/portfolio' },
-        photo: '../../../assets/images/projects-images/nyancat.gif',
+        photo: 'assets/images/projects-images/nyancat.gif',
         tech: ['HTML5', 'CSS3', 'JavaScript | JQuery', 'Photoshop', 'Gulp', 'Flex | RWD']
     },
     {
@@ -1246,7 +1246,7 @@ const AboutProjects = [
         description: { en: 'An application containing movie lists based on the TMDB API, and on my own project made in Adobe XD.',
             pl: 'Aplikacja zawierająca listy filmów bazująca na API serwisu TMDB, oraz na własnym projekcie wykonanym w Adobe XD.' },
         links: { demo: 'https://gitprzemek.github.io/movie-library/index.html', repo: 'https://github.com/gitprzemek/movie-library' },
-        photo: '../../../assets/images/projects-images/bb82.gif',
+        photo: 'assets/images/projects-images/bb82.gif',
         tech: ['HTML5', 'CSS3 | SASS', 'JavaScript | ES6', 'PS | Adobe XD', 'Gulp | Babel', 'BEM']
     },
     {
@@ -1254,14 +1254,14 @@ const AboutProjects = [
         description: { en: 'Memory card game, inspired by the theme of the movie Avengers: Infinity War.',
             pl: 'Gra typu Memory card, zainspirowana motywem z filmu Avengers: Infinity War.' },
         links: { demo: 'https://gitprzemek.github.io/avengers-memory-card/', repo: 'https://github.com/gitprzemek/avengers-memory-card' },
-        photo: '../../../assets/images/projects-images/thanos.gif',
+        photo: 'assets/images/projects-images/thanos.gif',
         tech: ['HTML5', 'CSS3', 'JavaScript | ES6', 'Photoshop', 'Flex | RWD', ' ']
     },
     {
         title: { en: 'Warcraft clock', pl: 'Warcraft clock' },
         description: { en: 'Disc clock in the style of World of Warcraft game.', pl: 'Zegar tarczowy w stylu gry World of Warcraft.' },
         links: { demo: 'https://gitprzemek.github.io/wow-horde-clock/', repo: 'https://github.com/gitprzemek/wow-horde-clock' },
-        photo: '../../../assets/images/projects-images/tauren.gif',
+        photo: 'assets/images/projects-images/tauren.gif',
         tech: ['HTML5', 'CSS3', 'JavaScript | ES6', 'Photoshop', 'Flex | RWD', ' ']
     },
 ];

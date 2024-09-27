@@ -3,7 +3,7 @@ export const AboutProjects = [
     title: { en: 'Portfolio', pl: 'Portfolio'},
     description: { en: 'My portfolio page inspired by Heroes of Might & Magic 3 game.', pl: 'Moja strona portfolio inspirowana grą Heroes of Might & Magic 3.'},
     links: {demo: 'https://gitprzemek.github.io/wow-horde-clock/', repo: 'https://github.com/gitprzemek/wow-horde-clock'},
-    photo: '../../../assets/images/projects-images/angel.gif',
+    photo: 'assets/images/projects-images/angel.gif',
     tech: ['Angular 2+', 'CSS3 | SASS', 'JS | TypeScript', 'Photoshop', 'BEM', 'Flex | RWD']
   },
   {
@@ -11,7 +11,7 @@ export const AboutProjects = [
     description: { en: 'Commercial project commissioned by a local restaurant.',
       pl: 'Komercyjny projekt wykonany na zlecenie miejscowej restauracji.'},
     links: {demo: 'http://uduzegokowboja.pl/', repo: 'https://github.com/gitprzemek/u_duzego_kowboja'},
-    photo: '../../../assets/images/projects-images/cowboy.webp',
+    photo: 'assets/images/projects-images/cowboy.webp',
     tech: ['HTML5', 'CSS3 | SASS', 'JavaScript | JQuery', 'Photoshop', 'BEM', 'Flex | RWD' ]
   },
   {
@@ -19,7 +19,7 @@ export const AboutProjects = [
     description: { en: 'My old portfolio page project',
       pl: 'Moje stare portfolio i projekt'},
     links: {demo: 'https://gitprzemek.github.io/portfolio/', repo: 'https://github.com/gitprzemek/portfolio'},
-    photo: '../../../assets/images/projects-images/nyancat.gif',
+    photo: 'assets/images/projects-images/nyancat.gif',
     tech: ['HTML5', 'CSS3', 'JavaScript | JQuery', 'Photoshop', 'Gulp', 'Flex | RWD' ]
   },
   {
@@ -27,7 +27,7 @@ export const AboutProjects = [
     description: { en: 'An application containing movie lists based on the TMDB API, and on my own project made in Adobe XD.',
       pl: 'Aplikacja zawierająca listy filmów bazująca na API serwisu TMDB, oraz na własnym projekcie wykonanym w Adobe XD.'},
     links: {demo: 'https://gitprzemek.github.io/movie-library/index.html', repo: 'https://github.com/gitprzemek/movie-library'},
-    photo: '../../../assets/images/projects-images/bb82.gif',
+    photo: 'assets/images/projects-images/bb82.gif',
     tech: ['HTML5', 'CSS3 | SASS', 'JavaScript | ES6', 'PS | Adobe XD', 'Gulp | Babel', 'BEM' ]
   },
   {
@@ -35,14 +35,14 @@ export const AboutProjects = [
     description: { en: 'Memory card game, inspired by the theme of the movie Avengers: Infinity War.',
       pl: 'Gra typu Memory card, zainspirowana motywem z filmu Avengers: Infinity War.'},
     links: {demo: 'https://gitprzemek.github.io/avengers-memory-card/', repo: 'https://github.com/gitprzemek/avengers-memory-card'},
-    photo: '../../../assets/images/projects-images/thanos.gif',
+    photo: 'assets/images/projects-images/thanos.gif',
     tech: ['HTML5', 'CSS3', 'JavaScript | ES6', 'Photoshop', 'Flex | RWD', ' ' ]
   },
   {
     title: { en: 'Warcraft clock', pl: 'Warcraft clock'},
     description: { en: 'Disc clock in the style of World of Warcraft game.', pl: 'Zegar tarczowy w stylu gry World of Warcraft.'},
     links: {demo: 'https://gitprzemek.github.io/wow-horde-clock/', repo: 'https://github.com/gitprzemek/wow-horde-clock'},
-    photo: '../../../assets/images/projects-images/tauren.gif',
+    photo: 'assets/images/projects-images/tauren.gif',
     tech: ['HTML5', 'CSS3', 'JavaScript | ES6', 'Photoshop', 'Flex | RWD', ' ' ]
   },
 
