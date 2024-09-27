@@ -145,7 +145,7 @@
   -moz-box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.7);
   background: rgba(0, 0, 0, 0.02);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/backgrounds/bg1.jpg") repeat  center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./../../../assets/images/backgrounds/bg1.jpg") repeat  center center;
   background-size: 350px auto;
   @include phone {
     text-align: center;
