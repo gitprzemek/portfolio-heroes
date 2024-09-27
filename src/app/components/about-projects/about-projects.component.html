@@ -38,7 +38,7 @@
               </div>
               <div class="about-projects__tile-col about-projects__tile-col--3">
                 <div class="about-projects__tile-tech" *ngFor="let tech of project.tech">
-                  <app-action-field class="about-projects__tile-tech-icon" [type]="'image'" [content]="'../../../assets/images/icons/arrow.png'"></app-action-field>
+                  <app-action-field class="about-projects__tile-tech-icon" [type]="'image'" [content]="'assets/images/icons/arrow.png'"></app-action-field>
                   <app-action-field class="about-projects__tile-tech-text" [type]="'text'" [content]="tech"></app-action-field>
                 </div>
               </div>
@@ -51,7 +51,7 @@
       <div class="about-projects__actions-cont">
         <app-action-field class="about-projects__button"
                           [type]="'button-img'"
-                          [content]="'../../../assets/images/icons/exit.png'"
+                          [content]="'assets/images/icons/exit.png'"
                           (click)="closeWindow()"></app-action-field>
       </div>
     </div>

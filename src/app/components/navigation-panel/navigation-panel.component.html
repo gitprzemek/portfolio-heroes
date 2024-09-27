@@ -6,7 +6,7 @@
   <div class="navigation-panel__content">
     <div class="navigation-panel__left-container">
       <div class="left-container__top">
-        <app-action-field class="left-container__top-left" [type]="'image'" [content]="'../../../assets/images/dragon-crakow2.png'"></app-action-field>
+        <app-action-field class="left-container__top-left" [type]="'image'" [content]="'assets/images/dragon-crakow2.png'"></app-action-field>
         <div class="left-container__top-right">
           <app-action-field class="left-container__top-right-top" [type]="'text'" [content]="'PRZEMYSLAW SZCZEPANSKI'"></app-action-field>
           <app-action-field class="left-container__top-right-top left-container__top-right-top--sub" [type]="'text'" [content]="'</> FRONTEND DEVELOPER'"></app-action-field>
@@ -16,26 +16,26 @@
       <div class="left-container__bottom">
         <app-action-field class="left-container__bottom-field"
                           [type]="'button-link'"
-                          [content]="'../../../assets/images/icons/github-logo2.png'"
+                          [content]="'assets/images/icons/github-logo2.png'"
                           [link]="'https://github.com/gitprzemek'"></app-action-field>
         <app-action-field class="left-container__bottom-field"
                           [type]="'button-link'"
-                          [content]="'../../../assets/images/icons/in3.png'"
+                          [content]="'assets/images/icons/in3.png'"
                           [link]="'https://www.linkedin.com/in/przemyslaw-szczepanski-in/'"></app-action-field>
         <app-action-field class="left-container__bottom-field"
                           [type]="'button-img'"
-                          [content]="'../../../assets/images/icons/mail-icon.png'"
+                          [content]="'assets/images/icons/mail-icon.png'"
                           (click)="openContact()"></app-action-field>
         <app-action-field class="left-container__bottom-field"
                           [type]="'button-link'"
-                          [content]="'../../../assets/images/icons/facebook-icon.png'"
+                          [content]="'assets/images/icons/facebook-icon.png'"
                           [link]="'https://www.facebook.com/przemek.szczepanski.50'"></app-action-field>
 
       </div>
     </div>
     <div class="navigation-panel__center-container">
       <div class="navigation-panel__field-wrapper navigation-panel__field-wrapper--image">
-        <app-action-field class="navigation-panel__center-image" [type]="'image'" [content]="'../../../assets/images/redflag.png'"></app-action-field>
+        <app-action-field class="navigation-panel__center-image" [type]="'image'" [content]="'assets/images/redflag.png'"></app-action-field>
       </div>
       <div class="navigation-panel__field-wrapper">
         <app-action-field class="navigation-panel__center-button" [type]="'button'" [content]="'MAIN_SITE.ABOUT_ME' | translate" (click)="openAboutMe()"></app-action-field>
@@ -54,7 +54,7 @@
     <div class="navigation-panel__right-container">
       <div id="player" hidden>
         <audio hidden loop #music>
-          <source src="../../../assets/music/music-file.mp3" type="audio/mpeg">
+          <source src="assets/music/music-file.mp3" type="audio/mpeg">
           If you're reading this, audio isn't supported.
         </audio>
       </div>
